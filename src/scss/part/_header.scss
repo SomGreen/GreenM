@@ -1,0 +1,90 @@
+.header{
+  &_top{
+    border-bottom: 1px solid #ced1d5;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.11);
+    padding: 16px 0;
+    .container{
+      text-align: justify;
+      font-size: 0;
+      &:after{
+        content: '';
+        width: 100%;
+        display: inline-block;
+      }
+    }
+    &_left{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &_right{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  &_logo{
+    display: inline-block;
+    vertical-align: middle;
+    &.header_company{
+      margin-right: 48px;
+    }
+    &.header_partner{
+      margin-right: 44px;
+    }
+  }
+  &_soc{
+    display: inline-block;
+    vertical-align: middle;
+    &__link{
+      margin-right: 22px;
+      &:last-child{
+        margin-right: 0;
+      }
+      img{
+        opacity: 0.25;
+      }
+    }
+  }
+  &_location{
+    margin-left: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    &_caption{
+      display: inline-block;
+      vertical-align: middle;
+      i{
+        color: $green;
+        font-size: 16px;
+      }
+    }
+    &_dropdown{
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+    }
+  }
+
+  &_bottom{
+    padding: 25px 0 21px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.11);
+    border: 1px solid #ced1d5;
+  }
+  &_nav{
+    font-size: 0;
+    @include justify;
+    // text-align: justify;
+    // &:after{
+    //   content: '';
+    //   width: 100%;
+    //   display: inline-block;
+    // }
+    &_item{
+      display: inline-block;
+      vertical-align: middle;
+      &__link{
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+    }
+  }
+}

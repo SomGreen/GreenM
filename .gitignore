@@ -1,0 +1,6 @@
+# Mac DS_Store Files
+.DS_Store
+
+/node_modules
+/production
+package-lock.json

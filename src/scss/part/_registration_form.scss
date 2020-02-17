@@ -1,0 +1,104 @@
+.step_counter{
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ced1d5;
+  &_h{
+    color: $fontBlack;
+  }
+  &_item{
+    color: $borderGreen;
+  }
+}
+
+.registration{
+  padding: 72px 0 100px;
+  &_header{
+    font-size: 0;
+    text-align: justify;
+    @include justify;
+    *{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  //registration_form
+  &_form{
+    form{
+      margin-left: -15px;
+      margin-right: -15px;
+      font-size: 0;
+    }
+    &_block{
+      font-size: 18px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 33.33%;
+      padding: 20px 15px;
+      &.phoneBlock,
+      &.withTwoSelects{
+        font-size: 0;
+        .selectField,
+        .formInput{
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      &.withTwoSelects{
+        .selectField{
+          width: 50%;
+          padding: 0 15px;
+          &:first-child{
+            padding-left: 0;
+          }
+          &:last-child{
+            padding-right: 0;
+          }
+        }
+      }
+      &.phoneBlock{
+        position: relative;
+        padding-left: 70px;
+        .selectField{
+          width: 55px;
+          position: absolute;
+          top: 50%;
+          left: 15px;
+          @include translate(0, -50%);
+        }
+        .formInput{
+          width: 100%;
+        }
+      }
+    }
+  } //registration_form
+}
+
+
+.formInput{
+  input{
+    width: 100%;
+    height: 55px;
+    border-radius: 4px;
+    border: 1px solid #ced1d5;
+    background-color: #ffffff;
+    padding: 20px;
+    color: $fontBlack;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+.select_dropdown{
+  height: 55px;
+  border-radius: 4px;
+  border: 1px solid #ced1d5;
+  background-color: #ffffff;
+}
+.dropdown_caption{
+  padding: 20px;
+  color: $fontBlack;
+  font-size: 18px;
+  font-weight: 300;
+  height: 100%;
+}

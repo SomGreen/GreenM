@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic-ext');
+
+@font-face {
+  font-family: 'SBSansUI';
+  src: url('../fonts/SBSansUI_Light/fonts/SBSansUI_Light.eot');
+  src: local('☺'), url('../fonts/SBSansUI_Light/fonts/SBSansUI_Light.ttf') format('truetype'), url('../fonts/SBSansUI_Light/fonts/SBSansUI_Light.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SBSansUI';
+  src: url('../fonts/SBSansUI_Regular/fonts/SBSansUI_Regular.eot');
+  src: local('☺'), url('../fonts/SBSansUI_Regular/fonts/SBSansUI_Regular.ttf') format('truetype'), url('../fonts/SBSansUI_Regular/fonts/SBSansUI_Regular.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SBSansUI';
+  src: url('../fonts/SBSansUI_Semibold/fonts/SBSansUI_Semibold.eot');
+  src: local('☺'), url('../fonts/SBSansUI_Semibold/fonts/SBSansUI_Semibold.ttf') format('truetype'), url('../fonts/SBSansUI_Semibold/fonts/SBSansUI_Semibold.svg') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SBSansUI';
+  src: url('../fonts/SBSansUI_Bold/fonts/SBSansUI_Bold.eot');
+  src: local('☺'), url('../fonts/SBSansUI_Bold/fonts/SBSansUI_Bold.ttf') format('truetype'), url('../fonts/SBSansUI_Bold/fonts/SBSansUI_Bold.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontawesome';
+  src: url('../fonts/fontAwesome/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontAwesome/fontawesome-webfont.svg') format('svg');
+  src: url('../fonts/fontAwesome/fontawesome-webfont.eot');
+  font-weight: 700;
+  font-style: normal;
+}

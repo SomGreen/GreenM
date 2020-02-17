@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+//= templates/_head.html
+
+
+<body class="home_page">
+	
+	//= templates/_header.html
+	
+	<main class="home_page">
+		
+		
+		<div class="registration">
+			<div class="container">
+				<div class="registration_header">
+					<div class="site_h">Регистрация</div>
+					<div class="step_counter">
+						<span class="step_counter_h">Шаг</span> <span class="step_counter_item">1</span><span>/2</span>
+					</div>
+				</div>
+				
+				<div class="registration_form">
+					<form action="">
+						
+						<div class="registration_form_block">
+							<div class=" selectField requiredField">
+								<select name="distance" id="">
+									<option value="0">Дистанция </option>
+									<option value="1">1 км</option>
+									<option value="2">2 км</option>
+									<option value="3">3 км</option>
+									<option value="4">4 км</option>
+									<option value="5">5 км</option>
+								</select>		
+							</div>
+						</div>
+						<div class="registration_form_block">
+							<div class=" selectField requiredField">
+								<select name="town" id="">
+									<option value="0">Город участия </option>
+									<option value="1">Питер</option>
+									<option value="2">Москва</option>
+									<option value="3">Калуга</option>
+									<option value="4">Ростов</option>
+									<option value="5">владивосток</option>
+								</select>		
+							</div>
+						</div>
+						<div class="registration_form_block">
+							<div class=" selectField requiredField">
+								<select name="status" id="">
+									<option value="1">Несовершеннолетний</option>
+									<option value="2">Совершеннолетний</option>
+									<option value="3">Совершеннолетний с ребенком</option>
+								</select>		
+							</div>
+						</div>
+						<div class="registration_form_block">
+							<div class="formInput requiredField">
+								<input type="text">
+							</div>
+						</div>
+						<div class="registration_form_block">
+							<div class="formInput requiredField">
+								<input type="text">
+							</div>
+						</div>
+						<div class="registration_form_block">
+							<div class="formInput requiredField">
+								<input type="text">
+							</div>
+						</div>
+						<div class="registration_form_block withTwoSelects">
+							<div class="selectField requiredField">
+								<select name="sex" id="">
+									<option value="0">Пол</option>
+									<option value="1">Мужской</option>
+									<option value="2">Женский</option>
+								</select>		
+							</div>
+							<div class=" selectField requiredField">
+								<select name="age" id="">
+									<option value="0">Возраст</option>
+									<option value="1">20-25</option>
+									<option value="2">25-30</option>
+									<option value="3">30-35</option>
+								</select>		
+							</div>
+						</div>
+						<div class="registration_form_block">
+							<div class="formInput requiredField">
+								<input type="text">
+							</div>
+						</div>
+						<div class="registration_form_block phoneBlock">
+							<div class=" selectField requiredField">
+								<select name="phone_code" id="">
+									<option value="1">+7</option>
+									<option value="2">+8</option>
+									<option value="3">+9</option>
+									<option value="4">+5</option>
+								</select>			
+							</div>
+							<div class="formInput requiredField">
+								<input type="text">
+							</div>
+						</div>
+						
+					</form>
+				</div>
+				
+			</div> <!--container-->
+		</div> <!--registration-->
+		
+	</main>
+	
+	<!-- //= templates/_footer.html -->
+	
+	
+	
+	//= templates/_js.html
+</body>
+</html>
+
+
+<div class="select_dropdown">
+	<ul class="dropdown_list"></ul>
+</div>
