@@ -14,6 +14,7 @@
 .registration{
   padding: 72px 0 100px;
   &_header{
+    margin-bottom: 25px;
     font-size: 0;
     text-align: justify;
     @include justify;
@@ -65,9 +66,31 @@
           top: 50%;
           left: 15px;
           @include translate(0, -50%);
+          .dropdown_caption{
+            border-radius: 4px 0 0 4px;
+            border-right: none;
+          }
         }
         .formInput{
           width: 100%;
+          input{
+            border-radius: 0 4px 4px 0;
+          }
+        }
+        .dropdown_caption{
+          padding: 15px 12px;
+          &:before{
+            display: none;  
+          }
+          &:after{
+            content: '\f0d7';
+            font-family: 'FontAwesome';
+            font-size: 14px;
+            color: #999999;
+            border: none;
+            @include transform(translate(0, -50%) rotate(0deg));
+            right: 6px;
+          }
         }
       }
     }
@@ -78,7 +101,7 @@
 .formInput{
   input{
     width: 100%;
-    height: 55px;
+    height: 56px;
     border-radius: 4px;
     border: 1px solid #ced1d5;
     background-color: #ffffff;
@@ -90,15 +113,45 @@
 }
 
 .select_dropdown{
-  height: 55px;
-  border-radius: 4px;
-  border: 1px solid #ced1d5;
+  height: 56px;
   background-color: #ffffff;
-}
-.dropdown_caption{
-  padding: 20px;
-  color: $fontBlack;
-  font-size: 18px;
-  font-weight: 300;
-  height: 100%;
+  .dropdown_caption{
+    border-radius: 4px;
+    border: 1px solid #ced1d5;
+    position: relative;
+    padding-right: 65px;
+    @include transition(0.25s, ease);
+    &.active{
+      border-radius: 4px 4px 0 0;
+      // border-bottom: none;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 55px;
+      border-left: 1px solid #ced1d5;
+    }
+    &:after{
+      // content: '\f078';
+      // font-family: 'FontAwesome';
+      // font-size: 14px;
+      content: '';
+      width: 12px;
+      height: 12px;
+      // background-color: $borderGreen;
+      border-left: 3px solid $borderGreen;
+      border-bottom: 3px solid $borderGreen;
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      @include transform(translate(0, -70%) rotate(-45deg))
+    }
+  }
+  .dropdown_list{
+    border-top: none;
+  }
 }

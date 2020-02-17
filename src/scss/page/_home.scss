@@ -1,0 +1,81 @@
+.jumbo{
+  height: 100%;
+  width: 100%;
+  min-height: 622px;
+  // background: url('../img/jumbo_bg.png') 50% 50% no-repeat;
+  background: url('../img/bg.png') 100% 50% no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 205px;
+  .container{
+    // height: 100%;
+  }
+  &_text{
+    width: 100%;
+    color: $white;
+    position: absolute;
+    top: 40%;
+    @include translate(0, -50%);
+    .container{
+      padding-bottom: 0;
+      height: auto;
+    }
+    &_h{
+      font-size: 74px;
+    }
+    &_caption{
+      max-width: 604px;
+      font-size: 18px;
+    }
+  }
+  &_timer{
+    position: absolute;
+    bottom: 74px;
+    // bottom: 0;
+    width: 100%;
+    .container{
+      position: relative;
+      
+    }
+    &_h{
+      margin-bottom: 19px;
+      img{
+        
+      }
+      span{
+        font-size: 18px;
+        font-weight: 400;
+        color: $fontBlack;
+      }
+    }
+    &_clock{
+      .lightTimerBlock{
+        display: inline-block;
+        border-radius: 5px;
+        background-color: #ffffff;
+        padding: 5px 36px 7px;
+        text-align: center;
+        margin-right: 19px;
+        &:last-child{
+          margin-right: 0;
+          .lightTimerСaptionSpan{
+            min-width: 65px;
+          } 
+        }
+      }
+      .lightTimerСaptionSpan{
+        color: $fontBlack;
+        font-size: 15px;
+        font-weight: 400;
+        display: block;
+      }
+      .lightTimerNumberSpan{
+        color: $fontBlack;
+        font-size: 49px;
+        font-weight: 700;
+        line-height: 51px;
+        display: block;
+      }
+    }
+  }
+}

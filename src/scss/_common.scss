@@ -8,4 +8,22 @@
   display: none;
   position: relative;
   z-index: 10;
+
+  background: $white;
+  border: 1px solid #ced1d5;
+  padding: 10px 0px;
+  &_item{
+    padding: 0 20px;
+    margin-bottom: 7px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+}
+.dropdown_caption{
+  padding: 15px 20px;
+  color: $fontBlack;
+  font-size: 18px;
+  font-weight: 300;
+  height: 100%;
+  cursor: pointer;
 }
