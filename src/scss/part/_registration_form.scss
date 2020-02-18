@@ -94,7 +94,129 @@
         }
       }
     }
+    &_caption{
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 19px;
+    }
+    .radioField{
+      display: inline-block;
+      vertical-align: middle;
+      input{
+        display: none;
+        &:checked + label{
+          &:before{
+            border: 2px solid $borderGreen;;
+          }
+          &:after{
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 20px;
+            position: absolute;
+            top: 8px;
+            left: 5px;
+            background: $borderGreen;;
+            @include transition(0.25, ease);
+          }
+        }
+      }
+      label{
+        margin-right: 17px;
+        padding-left: 23px;
+        position: relative;
+        &:before{
+          content: '';
+          width: 18px;
+          height: 18px;
+          border-radius: 18px;
+          border: 2px solid #999999;
+          display: block;
+          position: absolute;
+          top: 3px;
+          left: 0;
+          @include transition(0.25, ease);
+        }
+      }
+      
+    }
+    
+    .checkField{
+      input{
+        display: none;
+        &:checked + label{
+          &:before{
+            border: 2px solid $borderGreen;;
+          }
+          &:after{
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            position: absolute;
+            top: 5px;
+            left: 4px;
+            background: $borderGreen;
+            @include transition(0.25, ease);
+          }
+        }
+      }
+      label{
+        color: #999999;
+        font-size: 16px;
+        font-weight: 400;
+        position: relative;
+        padding-left: 23px;
+        &:before{
+          content: '';
+          width: 18px;
+          height: 18px;
+          border-radius: 2px;
+          border: 2px solid $fontBlack;;
+          display: block;
+          margin-top: 1px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          @include transition(0.25, ease);
+        }
+      }
+    }    
   } //registration_form
+}
+
+.hidden_form{
+  border-top: 2px solid $borderGreen;
+  padding-top: 57px;
+  &_wrapper{
+    padding: 26px 15px 0px;
+  }
+  &_h{
+    color: #999999;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &_block{
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+.add_kid_form_btn{
+  font-size: 18px;
+  text-align: center;
+  line-height: 48px;
+  background-color: #f2f2f2;
+  margin-top: 15px;
+  margin-bottom: 19px;
+  cursor: pointer;
+  i{
+    color: $borderGreen;
+    margin-right: 5px;
+  }
+  span{
+    color: $fontBlack;
+    font-weight: 300;
+  }
 }
 
 
@@ -111,6 +233,18 @@
     font-weight: 300;
   }
 }
+.formSubmit{
+  button{
+    width: 100%;
+    height: 55px;
+    border-radius: 4px;
+    background-color: $fontBlack;
+    color: $white;
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
 
 .select_dropdown{
   height: 56px;

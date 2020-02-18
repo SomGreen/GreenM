@@ -1,10 +1,11 @@
 
 /* timer */
-
-$('.jumbo_timer_clock').lightTimer({
-  language: 'ru',
-  deadline: '31 Jul 2020 23:59:00 GMT+0300'
-});
+if($('div').is('.jumbo_timer_clock')){
+  $('.jumbo_timer_clock').lightTimer({
+    language: 'ru',
+    deadline: '31 Jul 2020 23:59:00 GMT+0300'
+  });
+}
 
 /* timer END */
 

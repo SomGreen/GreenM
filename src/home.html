@@ -10,8 +10,7 @@
 	
 	<main class="home_page">
 		
-		<div class="jumbo">
-			
+		<!-- <div class="jumbo">
 			<div class="jumbo_text">
 				<div class="container">
 					<div class="jumbo_text_h">Зелёный Марафон</div>
@@ -28,7 +27,7 @@
 					<div class="jumbo_timer_clock"></div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		
 		<div class="registration">
 			<div class="container">
@@ -125,6 +124,83 @@
 								<input type="text">
 							</div>
 						</div>
+						
+
+						
+						<div class="hidden_form_wrapper">
+							<div class="hidden_form">
+								<div class="hidden_form_h">Персональная информация совершеннолетнего</div>
+								<div class="hidden_form_block">
+									<div class="registration_form_block">
+										<div class=" selectField requiredField">
+											<select name="status" id="">
+												<option value="1">Несовершеннолетний</option>
+												<option value="2">Совершеннолетний</option>
+												<option value="3">Совершеннолетний с ребенком</option>
+											</select>		
+										</div>
+									</div>
+									<div class="registration_form_block withTwoSelects">
+										<div class="selectField requiredField">
+											<select name="sex" id="">
+												<option value="0">Пол</option>
+												<option value="1">Мужской</option>
+												<option value="2">Женский</option>
+											</select>		
+										</div>
+										<div class=" selectField requiredField">
+											<select name="age" id="">
+												<option value="0">Возраст</option>
+												<option value="1">20-25</option>
+												<option value="2">25-30</option>
+												<option value="3">30-35</option>
+											</select>		
+										</div>
+									</div>
+									<div class="registration_form_block"></div>
+									<div class="registration_form_block">
+										<div class="formInput requiredField">
+											<input type="text" placeholder="Фамилия">
+										</div>
+									</div>
+									<div class="registration_form_block">
+										<div class="formInput requiredField">
+											<input type="text" placeholder="Имя">
+										</div>
+									</div>
+									<div class="registration_form_block">
+										<div class="formInput requiredField">
+											<input type="text" placeholder="Отчество">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="add_kid_form_btn"><i class="fa fa-male" aria-hidden="true"></i><span>Добавить ребенка</span></div>
+						</div>
+						
+
+						
+						<div class="registration_form_block">
+							<div class="registration_form_caption">Сотрудник Сбербанка:</div>
+							<div class=" radioField requiredField">
+								<input type="radio" id="yes" name="coworker" >
+								<label for="yes">Да</label>
+								<input type="radio" id="no" name="coworker">
+								<label for="no">Нет</label>
+							</div>
+						</div>
+						<div class="registration_form_block">
+							<div class=" checkField requiredField">
+								<input type="checkbox" id="rules">
+								<label for="rules">С правилами ознакомлен (-на)</label>
+							</div>
+						</div>
+						<div class="registration_form_block">
+							<div class="formSubmit">
+								<button type="button">Далее</button>
+							</div>
+						</div>
+						
 						
 					</form>
 				</div>

@@ -276,6 +276,118 @@ img {
           -webkit-transform: translate(0, -50%) rotate(0deg);
           transform: translate(0, -50%) rotate(0deg);
           right: 6px; }
+  .registration_form_caption {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 19px; }
+  .registration_form .radioField {
+    display: inline-block;
+    vertical-align: middle; }
+    .registration_form .radioField input {
+      display: none; }
+      .registration_form .radioField input:checked + label:before {
+        border: 2px solid #08a652; }
+      .registration_form .radioField input:checked + label:after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 20px;
+        position: absolute;
+        top: 8px;
+        left: 5px;
+        background: #08a652;
+        transition: 0.25 ease;
+        -webkit-transition: 0.25 ease;
+        -moz-transition: 0.25 ease;
+        -ms-transition: 0.25 ease;
+        -o-transition: 0.25 ease; }
+    .registration_form .radioField label {
+      margin-right: 17px;
+      padding-left: 23px;
+      position: relative; }
+      .registration_form .radioField label:before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        border-radius: 18px;
+        border: 2px solid #999999;
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        transition: 0.25 ease;
+        -webkit-transition: 0.25 ease;
+        -moz-transition: 0.25 ease;
+        -ms-transition: 0.25 ease;
+        -o-transition: 0.25 ease; }
+  .registration_form .checkField input {
+    display: none; }
+    .registration_form .checkField input:checked + label:before {
+      border: 2px solid #08a652; }
+    .registration_form .checkField input:checked + label:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      position: absolute;
+      top: 5px;
+      left: 4px;
+      background: #08a652;
+      transition: 0.25 ease;
+      -webkit-transition: 0.25 ease;
+      -moz-transition: 0.25 ease;
+      -ms-transition: 0.25 ease;
+      -o-transition: 0.25 ease; }
+  .registration_form .checkField label {
+    color: #999999;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    padding-left: 23px; }
+    .registration_form .checkField label:before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-radius: 2px;
+      border: 2px solid #262626;
+      display: block;
+      margin-top: 1px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 0.25 ease;
+      -webkit-transition: 0.25 ease;
+      -moz-transition: 0.25 ease;
+      -ms-transition: 0.25 ease;
+      -o-transition: 0.25 ease; }
+
+.hidden_form {
+  border-top: 2px solid #08a652;
+  padding-top: 57px; }
+  .hidden_form_wrapper {
+    padding: 26px 15px 0px; }
+  .hidden_form_h {
+    color: #999999;
+    font-size: 16px;
+    font-weight: 400; }
+  .hidden_form_block {
+    margin-left: -15px;
+    margin-right: -15px; }
+
+.add_kid_form_btn {
+  font-size: 18px;
+  text-align: center;
+  line-height: 48px;
+  background-color: #f2f2f2;
+  margin-top: 15px;
+  margin-bottom: 19px;
+  cursor: pointer; }
+  .add_kid_form_btn i {
+    color: #08a652;
+    margin-right: 5px; }
+  .add_kid_form_btn span {
+    color: #262626;
+    font-weight: 300; }
 
 .formInput input {
   width: 100%;
@@ -287,6 +399,15 @@ img {
   color: #262626;
   font-size: 18px;
   font-weight: 300; }
+
+.formSubmit button {
+  width: 100%;
+  height: 55px;
+  border-radius: 4px;
+  background-color: #262626;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400; }
 
 .select_dropdown {
   height: 56px;
