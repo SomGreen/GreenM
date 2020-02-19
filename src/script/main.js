@@ -1,4 +1,65 @@
+function validateField(inputFieldContainer) {
 
+  // var inputFieldContainer = $(inputField).parents('.requiredField');
+  var inputField = $(inputFieldContainer).find('select, input');
+  console.log('inputField');
+  console.log(inputField);
+	var email;
+	var valid = true;
+
+  if(inputFieldContainer.is('.radioField')){
+    var checkedRadio = false;
+    $.each(inputField, function(i, e) {
+      if($(e).prop('checked')){
+        checkedRadio = true;
+      }
+    });
+    if(!checkedRadio){
+      inputFieldContainer.addClass('error_field');
+			valid = false;
+    }
+  }
+
+	if(inputField.is('.emailInput') == true){
+		email = inputField.val();
+		var pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		if(!pattern.test(email)){
+			inputFieldContainer.addClass('error_field');
+			valid = false;
+		}
+	}
+	if(inputField.is('.phoneInput') == true){
+		var pattern = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){12,15}(\s*)?$/;
+    phone = $(inputField).val();
+    console.log(phone);
+		if(!pattern.test(phone)){
+			inputFieldContainer.parents('.phoneBlock').addClass('error_field');
+			valid = false;
+		}
+  }
+
+	if(inputField.is('.checkboxField') == true){
+    console.log('checked',$(inputField).prop('checked'));
+    if(!$(inputField).prop('checked')){
+      $(inputField).siblings('label').addClass('error');
+    }
+  }
+
+  if(inputField.is('select')){
+    var selectVal = parseInt(inputField.val());
+    console.log(selectVal);
+    if(selectVal == -1){
+			inputFieldContainer.addClass('error_field');
+    }
+  }
+
+	if($.trim($(inputField).val()).length == 0){
+		$(inputFieldContainer).addClass('error_field');
+	}
+
+	return valid;
+
+}
 /* timer */
 if($('div').is('.jumbo_timer_clock')){
   $('.jumbo_timer_clock').lightTimer({
@@ -21,12 +82,15 @@ if($('body').find('.selectField').length != 0){
     '<div class="dropdown_caption"></div>'+
     '<ul class="dropdown_list"></ul>'+
     '</div> ');
+
     
     $(elem).find('.dropdown_caption').html($(option).first().html());
     $.each(option, function(i, e) {
       
       $(elem).find('.dropdown_list').append('<li class="dropdown_list_item" data-value="'+$(e).val()+'">'+$(e).html()+'</li>');
     });
+
+    $(elem).find('.dropdown_list').mCustomScrollbar();
   });
   
 }
@@ -39,21 +103,21 @@ if($('body').find('.selectField').length != 0){
 $('body').on('click', '.dropdown_caption', function() {
   // $(this).siblings('.dropdown_list').slideToggle('fast');
   // $(this).toggleClass('active');
-
+  
   if($(this).is('.active')){
     $(this).siblings('.dropdown_list').slideUp('fast');
     $(this).removeClass('active');
-
+    
   }
   else{
     $('.dropdown_list').slideUp('fast');
     $('.dropdown_caption').removeClass('active');
-
+    
     $(this).siblings('.dropdown_list').slideDown('fast');
     $(this).addClass('active');
     
   }
-
+  
 });
 $('body').on('click', '.dropdown_list_item', function() {
   $(this).parents('.dropdown_list').slideUp('fast');
@@ -73,3 +137,76 @@ $(document).mouseup(function (e){
 });
 
 /* dropdown END */
+
+
+/* registration form */
+$('body').on('click', '.select_dropdown .dropdown_list_item', function() {
+  $(this).parents('.selectField').find('select').change();
+});
+
+$('body').on('change', '.registration_form select', function() {
+  console.log('change select');
+  $(this).parents('.requiredField').removeClass('error_field');
+  console.log($(this).val());
+  var val = parseInt($(this).val());
+  if(val == -1){
+    $(this).parents('.requiredField').addClass('error_field');
+  }
+
+});
+$('body').on('blur', '.requiredField input', function() {
+  var inputField = $(this).parents('.requiredField');
+  validateField(inputField);
+});
+$('body').on('focus', '.requiredField input', function() {
+  $(this).parents('.requiredField').removeClass('error_field');
+});
+
+$('body').on('blur', '.telInput input', function() {
+  // var inputField = $(this).parents('.phoneBlock').find('.requiredField');
+  // validateField(inputField);
+});
+$('body').on('focus', '.telInput input', function() {
+  $(this).parents('.phoneBlock').removeClass('error_field');
+});
+
+$('body').on('blur', '.telInput input', function() {
+  var code = $(this).parents('.phoneBlock').find('select').val();
+  var number = $(this).val();
+  $(this).parents('.phoneBlock').find('.requiredField input').val(code+number);
+  var inputField = $(this).parents('.phoneBlock').find('.requiredField');
+  validateField(inputField);
+});
+$('body').on('change', '.telCodeSelect select', function() {
+  var code = $(this).val();
+  var number = $(this).parents('.phoneBlock').find('.telInput input').val();
+  
+  console.log(number);
+  if(!number){
+    number = 0;
+  }
+  $(this).parents('.phoneBlock').find('.requiredField input').val(code+number);
+});
+
+
+$('body').on('click', '.formSubmit button', function(e) {
+  console.log('submit');
+  
+  e.preventDefault();
+  var tempValidIdent;
+  var validIdentArray = [];
+  
+  $('.requiredField').not('.hidenRequired').each(function(i, e) {
+    tempValidIdent = validateField($(e));
+    validIdentArray.push(tempValidIdent);	
+  });
+  
+  var invalid = $.inArray(false, validIdentArray);
+
+  if(invalid == -1){
+    $('.registration_form form').submit();
+  }
+});
+
+$('.telInput input').mask('9(999)999-99-99');
+/* registration form END */

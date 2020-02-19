@@ -232,6 +232,16 @@ img {
     vertical-align: middle;
     width: 33.33%;
     padding: 20px 15px; }
+    .registration_form_block .requiredField.error_field,
+    .registration_form_block .phoneBlock.error_field {
+      -webkit-box-shadow: 0 0 1px 1px red;
+      box-shadow: 0 0 1px 1px red; }
+    .registration_form_block .radioField.error_field {
+      border: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+      .registration_form_block .radioField.error_field label:before {
+        border: 2px solid red; }
     .registration_form_block.phoneBlock, .registration_form_block.withTwoSelects {
       font-size: 0; }
       .registration_form_block.phoneBlock .selectField,
@@ -239,35 +249,47 @@ img {
       .registration_form_block.withTwoSelects .formInput {
         display: inline-block;
         vertical-align: middle; }
-    .registration_form_block.withTwoSelects .selectField {
+    .registration_form_block .withTwoSelects_container {
+      display: inline-block;
+      vertical-align: middle;
       width: 50%;
       padding: 0 15px; }
-      .registration_form_block.withTwoSelects .selectField:first-child {
+      .registration_form_block .withTwoSelects_container:first-child {
         padding-left: 0; }
-      .registration_form_block.withTwoSelects .selectField:last-child {
+      .registration_form_block .withTwoSelects_container:last-child {
         padding-right: 0; }
-    .registration_form_block.phoneBlock {
+      .registration_form_block .withTwoSelects_container .selectField {
+        width: 100%; }
+    .registration_form_block.phoneBlock,
+    .registration_form_block .phoneBlock {
       position: relative;
-      padding-left: 70px; }
-      .registration_form_block.phoneBlock .selectField {
+      padding-left: 55px; }
+      .registration_form_block.phoneBlock .selectField,
+      .registration_form_block .phoneBlock .selectField {
         width: 55px;
         position: absolute;
         top: 50%;
-        left: 15px;
+        left: 0px;
         -webkit-transform: translate(0, -50%);
         transform: translate(0, -50%); }
-        .registration_form_block.phoneBlock .selectField .dropdown_caption {
+        .registration_form_block.phoneBlock .selectField .dropdown_caption,
+        .registration_form_block .phoneBlock .selectField .dropdown_caption {
           border-radius: 4px 0 0 4px;
           border-right: none; }
-      .registration_form_block.phoneBlock .formInput {
+      .registration_form_block.phoneBlock .formInput,
+      .registration_form_block .phoneBlock .formInput {
         width: 100%; }
-        .registration_form_block.phoneBlock .formInput input {
+        .registration_form_block.phoneBlock .formInput input,
+        .registration_form_block .phoneBlock .formInput input {
           border-radius: 0 4px 4px 0; }
-      .registration_form_block.phoneBlock .dropdown_caption {
+      .registration_form_block.phoneBlock .dropdown_caption,
+      .registration_form_block .phoneBlock .dropdown_caption {
         padding: 15px 12px; }
-        .registration_form_block.phoneBlock .dropdown_caption:before {
+        .registration_form_block.phoneBlock .dropdown_caption:before,
+        .registration_form_block .phoneBlock .dropdown_caption:before {
           display: none; }
-        .registration_form_block.phoneBlock .dropdown_caption:after {
+        .registration_form_block.phoneBlock .dropdown_caption:after,
+        .registration_form_block .phoneBlock .dropdown_caption:after {
           content: '\f0d7';
           font-family: 'FontAwesome';
           font-size: 14px;
@@ -360,6 +382,14 @@ img {
       -moz-transition: 0.25 ease;
       -ms-transition: 0.25 ease;
       -o-transition: 0.25 ease; }
+    .registration_form .checkField label.error:before {
+      border: 2px solid red; }
+  .registration_form .selectField {
+    position: relative; }
+  .registration_form .dropdown_list {
+    max-height: 250px;
+    position: absolute;
+    width: 100%; }
 
 .hidden_form {
   border-top: 2px solid #08a652;
@@ -410,7 +440,7 @@ img {
   font-weight: 400; }
 
 .select_dropdown {
-  height: 56px;
+  min-height: 56px;
   background-color: #ffffff; }
   .select_dropdown .dropdown_caption {
     border-radius: 4px;
@@ -446,6 +476,22 @@ img {
       transform: translate(0, -70%) rotate(-45deg); }
   .select_dropdown .dropdown_list {
     border-top: none; }
+
+@media all and (max-width: 991px) {
+  .registration_form_block {
+    width: 50%; } }
+
+@media all and (max-width: 768px) {
+  .registration_form_block {
+    width: 100%; }
+    .registration_form_block .registration_form_caption {
+      margin-bottom: 10px; }
+    .registration_form_block .registration_form_caption,
+    .registration_form_block .radioField {
+      width: 100%;
+      text-align: center; }
+    .registration_form_block .checkField {
+      text-align: center; } }
 
 .jumbo {
   height: 100%;

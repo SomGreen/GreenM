@@ -43,8 +43,8 @@
 						
 						<div class="registration_form_block">
 							<div class=" selectField requiredField">
-								<select name="distance" id="">
-									<option value="0">Дистанция </option>
+								<select name="distance" id="" class="selectInput">
+									<option value="-1">Дистанция </option>
 									<option value="1">1 км</option>
 									<option value="2">2 км</option>
 									<option value="3">3 км</option>
@@ -55,19 +55,38 @@
 						</div>
 						<div class="registration_form_block">
 							<div class=" selectField requiredField">
-								<select name="town" id="">
-									<option value="0">Город участия </option>
+								<select name="town" id="" class="selectInput">
+									<option value="-1">Город участия </option>
 									<option value="1">Питер</option>
 									<option value="2">Москва</option>
 									<option value="3">Калуга</option>
 									<option value="4">Ростов</option>
 									<option value="5">Владивосток</option>
+									<option value="6">Владивосток1</option>
+									<option value="7">Владивосток2</option>
+									<option value="8">Владивосток3</option>
+									<option value="9">Владивосток4</option>
+									<option value="10">Владивосток5</option>
+									<option value="11">Владивосток6</option>
+									<option value="12">Владивосток7</option>
+									<option value="13">Владивосток8</option>
+									<option value="14">Владивосток9</option>
+									<option value="15">Владивосток10</option>
+									<option value="16">Владивосток11</option>
+									<option value="17">Владивосток12</option>
+									<option value="18">Владивосток13</option>
+									<option value="19">Владивосток14</option>
+									<option value="20">Владивосток15</option>
+									<option value="21">Владивосток16</option>
+									<option value="22">Владивосток17</option>
+									<option value="23">Владивосток18</option>
 								</select>		
 							</div>
 						</div>
 						<div class="registration_form_block">
 							<div class=" selectField requiredField">
-								<select name="status" id="">
+								<select name="status" id="" class="selectInput">
+									<option value="-1">Выбор участника</option>
 									<option value="1">Несовершеннолетний</option>
 									<option value="2">Совершеннолетний</option>
 									<option value="3">Совершеннолетний с ребенком</option>
@@ -76,64 +95,76 @@
 						</div>
 						<div class="registration_form_block">
 							<div class="formInput requiredField">
-								<input type="text" placeholder="Фамилия">
+								<input type="text" placeholder="Фамилия" class="inputField">
 							</div>
 						</div>
 						<div class="registration_form_block">
 							<div class="formInput requiredField">
-								<input type="text" placeholder="Имя">
+								<input type="text" placeholder="Имя" class="inputField">
 							</div>
 						</div>
 						<div class="registration_form_block">
 							<div class="formInput requiredField">
-								<input type="text" placeholder="Отчество">
+								<input type="text" placeholder="Отчество" class="inputField">
 							</div>
 						</div>
 						<div class="registration_form_block withTwoSelects">
-							<div class="selectField requiredField">
-								<select name="sex" id="">
-									<option value="0">Пол</option>
-									<option value="1">Мужской</option>
-									<option value="2">Женский</option>
-								</select>		
+							<div class="withTwoSelects_container">								
+								<div class="selectField requiredField">
+									<select name="sex" id="" class="selectInput">
+										<option value="-1">Пол</option>
+										<option value="1">Мужской</option>
+										<option value="2">Женский</option>
+									</select>		
+								</div>
 							</div>
-							<div class=" selectField requiredField">
-								<select name="age" id="">
-									<option value="0">Возраст</option>
-									<option value="1">20-25</option>
-									<option value="2">25-30</option>
-									<option value="3">30-35</option>
-								</select>		
+							<div class="withTwoSelects_container">								
+								<div class=" selectField requiredField">
+									<select name="age" id="" class="selectInput">
+										<option value="-1">Возраст</option>
+										<option value="1">20-25</option>
+										<option value="2">25-30</option>
+										<option value="3">30-35</option>
+									</select>		
+								</div>
 							</div>
 						</div>
 						<div class="registration_form_block">
 							<div class="formInput requiredField">
-								<input type="email" placeholder="Ваша почта">
+								<input type="email" placeholder="Ваша почта" class="emailInput">
 							</div>
 						</div>
-						<div class="registration_form_block phoneBlock">
-							<div class=" selectField requiredField">
-								<select name="phone_code" id="">
-									<option value="1">+7</option>
-									<option value="2">+8</option>
-									<option value="3">+9</option>
-									<option value="4">+5</option>
-								</select>			
+						<div class="registration_form_block ">
+							<div class="phoneBlock">
+								
+								<div class="requiredField " style="display: none;">
+									<input type="text" class="phoneInput">		
+								</div>
+								<div class=" selectField telCodeSelect">
+									<select name="phone_code" id="">
+										<option value="+7">+7</option>
+										<option value="+8">+8</option>
+										<option value="+9">+9</option>
+										<option value="+5">+5</option>
+									</select>			
+								</div>
+								<div class="formInput telInput">
+									<input type="text">
+								</div>
 							</div>
-							<div class="formInput requiredField">
-								<input type="text">
-							</div>
+							
 						</div>
 						
-
+						
 						
 						<div class="hidden_form_wrapper">
 							<div class="hidden_form">
 								<div class="hidden_form_h">Персональная информация совершеннолетнего</div>
 								<div class="hidden_form_block">
 									<div class="registration_form_block">
-										<div class=" selectField requiredField">
-											<select name="status" id="">
+										<div class=" selectField requiredField hidenRequired">
+											<select name="status_1" id="" class="selectInput">
+												<option value="-1">Выбор участника</option>
 												<option value="1">Несовершеннолетний</option>
 												<option value="2">Совершеннолетний</option>
 												<option value="3">Совершеннолетний с ребенком</option>
@@ -141,36 +172,40 @@
 										</div>
 									</div>
 									<div class="registration_form_block withTwoSelects">
-										<div class="selectField requiredField">
-											<select name="sex" id="">
-												<option value="0">Пол</option>
-												<option value="1">Мужской</option>
-												<option value="2">Женский</option>
-											</select>		
+										<div class="withTwoSelects_container">	
+											<div class="selectField requiredField">
+												<select name="sex_1" id="" class="selectInput">
+													<option value="-1">Пол</option>
+													<option value="1">Мужской</option>
+													<option value="2">Женский</option>
+												</select>		
+											</div>
 										</div>
-										<div class=" selectField requiredField">
-											<select name="age" id="">
-												<option value="0">Возраст</option>
-												<option value="1">20-25</option>
-												<option value="2">25-30</option>
-												<option value="3">30-35</option>
-											</select>		
+										<div class="withTwoSelects_container">
+											<div class=" selectField requiredField">
+												<select name="age_1" id="" class="selectInput">
+													<option value="-1">Возраст</option>
+													<option value="1">20-25</option>
+													<option value="2">25-30</option>
+													<option value="3">30-35</option>
+												</select>		
+											</div>
 										</div>
 									</div>
 									<div class="registration_form_block"></div>
 									<div class="registration_form_block">
 										<div class="formInput requiredField">
-											<input type="text" placeholder="Фамилия">
+											<input type="text" placeholder="Фамилия" class="inputField">
 										</div>
 									</div>
 									<div class="registration_form_block">
 										<div class="formInput requiredField">
-											<input type="text" placeholder="Имя">
+											<input type="text" placeholder="Имя" class="inputField">
 										</div>
 									</div>
 									<div class="registration_form_block">
 										<div class="formInput requiredField">
-											<input type="text" placeholder="Отчество">
+											<input type="text" placeholder="Отчество" class="inputField">
 										</div>
 									</div>
 								</div>
@@ -178,7 +213,7 @@
 							<div class="add_kid_form_btn"><i class="fa fa-male" aria-hidden="true"></i><span>Добавить ребенка</span></div>
 						</div>
 						
-
+						
 						
 						<div class="registration_form_block">
 							<div class="registration_form_caption">Сотрудник Сбербанка:</div>
@@ -191,7 +226,7 @@
 						</div>
 						<div class="registration_form_block">
 							<div class=" checkField requiredField">
-								<input type="checkbox" id="rules">
+								<input type="checkbox" id="rules" class="checkboxField">
 								<label for="rules">С правилами ознакомлен (-на)</label>
 							</div>
 						</div>
