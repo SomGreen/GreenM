@@ -64,9 +64,39 @@
       display: inline-block;
       vertical-align: middle;
       position: relative;
+      .dropdown_caption{
+        color: $fontBlack;
+        font-size: 14px;
+        font-weight: 400;
+        position: relative;
+        padding: 0;
+        padding-right: 10px;
+        &:after{
+          content: '\f0d7';
+          font-family: 'FontAwesome';
+          font-size: 14px;
+          color: #999999;
+          border: none;
+          -webkit-transform: translate(0, -45%) rotate(0deg);
+          transform: translate(0, -45%) rotate(0deg);
+          position: absolute;
+          top: 50%;
+          right: 0px;
+        }
+      }
+      .dropdown_list{
+        position: absolute;
+        right: 0;
+        margin-top: 5px;
+        min-width: 100%;
+        padding: 5px;
+        &_item{
+          margin-bottom: 4px;
+        }
+      }
     }
   }
-
+  
   &_bottom{
     padding: 25px 0 21px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.11);
@@ -77,17 +107,42 @@
     @include justify;
     // text-align: justify;
     // &:after{
-    //   content: '';
-    //   width: 100%;
-    //   display: inline-block;
-    // }
-    &_item{
-      display: inline-block;
-      vertical-align: middle;
-      &__link{
-        text-transform: uppercase;
-        font-size: 14px;
+      //   content: '';
+      //   width: 100%;
+      //   display: inline-block;
+      // }
+      &_item{
+        display: inline-block;
+        vertical-align: middle;
+        &__link{
+          text-transform: uppercase;
+          font-size: 14px;
+          &.with_list{
+            position: relative;
+            padding-right: 15px;
+            &:after{
+              content: '\f0d7';
+              font-family: 'FontAwesome';
+              color: $green;
+              font-size: 14px;
+              position: absolute;
+              top: 50%;
+              right: 0;
+              @include translate(0, -50%);
+
+            }
+          }
+        }
       }
     }
   }
-}
+
+
+  @media all and(max-width: 890px){
+    .header{
+      display: none;
+    }
+    main{
+      padding-top: 0;
+    }
+  }

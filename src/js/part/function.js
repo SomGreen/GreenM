@@ -42,6 +42,8 @@ function validateField(inputFieldContainer) {
     console.log('checked',$(inputField).prop('checked'));
     if(!$(inputField).prop('checked')){
       $(inputField).siblings('label').addClass('error');
+			valid = false;
+
     }
   }
 
@@ -49,7 +51,8 @@ function validateField(inputFieldContainer) {
     var selectVal = parseInt(inputField.val());
     console.log(selectVal);
     if(selectVal == -1){
-			inputFieldContainer.addClass('error_field');
+      inputFieldContainer.addClass('error_field');
+			valid = false;
     }
   }
 

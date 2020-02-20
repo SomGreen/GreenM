@@ -99,6 +99,9 @@ $('body').on('blur', '.requiredField input', function() {
 $('body').on('focus', '.requiredField input', function() {
   $(this).parents('.requiredField').removeClass('error_field');
 });
+$('body').on('change', '.radioField input', function() {
+  $(this).parents('.requiredField').removeClass('error_field');
+});
 
 $('body').on('blur', '.telInput input', function() {
   // var inputField = $(this).parents('.phoneBlock').find('.requiredField');
@@ -134,7 +137,7 @@ $('body').on('click', '.formSubmit button', function(e) {
   var tempValidIdent;
   var validIdentArray = [];
   
-  $('.requiredField').not('.hidenRequired').each(function(i, e) {
+  $(this).parents('form').find('.requiredField').not('.hidenRequired').each(function(i, e) {
     tempValidIdent = validateField($(e));
     validIdentArray.push(tempValidIdent);	
   });
@@ -147,4 +150,95 @@ $('body').on('click', '.formSubmit button', function(e) {
 });
 
 $('.telInput input').mask('9(999)999-99-99');
+
+
+/**/
+var formClass = ".registration-form";
+function regSelect(select) {
+  return $(formClass + " " + select);
+}
+function funcSetMinorType() {
+  regSelect("#form-lastname").attr("name", "child[-1][lastname]");
+  regSelect("#form-firstname").attr("name", "child[-1][firstname]");
+  regSelect("#form-middlename").attr("name", "child[-1][middlename]");
+  regSelect("#form-age-id").attr("name", "child[-1][age]");
+  regSelect("#form-gender-id").attr("name", "child[-1][gender_id]");
+  setRegAge(true);
+}
+function setRegAge(isChild) {
+  var countAgeData = regSelect("#form-age-id").attr("data-count-main");
+  var _countAge = 0;
+  regSelect("#form-age-id").parent().find("li").each(function (i, e) {
+      var value = $(e).attr("data-value");
+      if (value != -1) {
+          if (isChild) {
+              if (_countAge < countAgeData) {
+                  $(e).hide();
+              } else {
+                  $(e).show();
+              }
+          } else {
+              if (_countAge < countAgeData) {
+                  $(e).show();
+              } else {
+                  $(e).hide();
+              }
+          }
+          _countAge++;
+      }
+  });
+}
+function funcActionSelectType() {
+  console.log('funcActionSelectType');
+  let id = $(this).val();
+  // setDistances();
+  // funcSetDefaulType();
+  switch (id) {
+      case "1":
+          regSelect("#adult_form").hide();
+          regSelect("#children_form").hide();
+          regSelect(".add_kid_form_btn").hide();
+          break;
+      case "2":
+          regSelect("#adult_form").show();
+          regSelect("#children_form").hide();
+          regSelect(".add_kid_form_btn").hide();
+          funcSetMinorType();
+          break;
+      case "3":
+          regSelect("#adult_form").hide();
+          regSelect("#children_form").show();
+
+          var count = regSelect("#children_form").attr("data-count");
+
+          if (!count || count * 1 < 5 - 1) {
+              regSelect(".add_kid_form_btn").show();
+          }
+          if (!count) {
+              regSelect("#children_form").attr("data-count", 1);
+
+              var count = regSelect("#children_form").attr("data-count");
+              for (var c = 0; c < count; c++) {
+                  regSelect("#children_form .children-form-" + c).addClass("active");
+              }
+          }
+          break;
+  }
+}
+function funcAddChildren() {
+  var count = regSelect("#children_form").attr("data-count") * 1;
+
+  regSelect("#children_form .children-form-" + count).addClass("active");
+
+  count++;
+  if (count < 5) {
+      regSelect("#children_form").attr("data-count", count);
+  } else {
+      regSelect(".add_kid_form_btn").hide();
+  }
+}
+$('.registration-form select[name="type_id"]').on('change', funcActionSelectType);
+regSelect("").on("click", ".add_kid_form_btn", funcAddChildren);
+/**/
+
 /* registration form END */

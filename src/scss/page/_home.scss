@@ -1,21 +1,53 @@
 .jumbo{
-  height: 100%;
+  // height: 100%;
   width: 100%;
   min-height: 622px;
   // background: url('../img/jumbo_bg.png') 50% 50% no-repeat;
-  background: url('../img/bg.png') 100% 50% no-repeat;
+  background: url('../img/jumbo_bg.png') 100% 50% no-repeat;
   background-size: cover;
   position: relative;
   padding-bottom: 205px;
+  .running_container{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    @include translate(-50%, 0%);
+  }
+  .running_img{
+    position: absolute;
+    bottom: 0;
+    right: 200px;
+  }
   .container{
     // height: 100%;
   }
   &_text{
+    // background: url('../img/jumbo_text_bg.png') no-repeat;
+    // background-position: 0 0;
+    // background-size: contain;
+    padding: 30px 0 30px;
     width: 100%;
     color: $white;
     position: absolute;
-    top: 40%;
+    top: 43%;
     @include translate(0, -50%);
+    overflow: hidden;
+    &_bg{
+      position: absolute;
+      top: 50%;
+      // right: 200px;
+      right: 11%;
+      @include translate(0, -50%);
+      z-index: -1;
+      width: 100%;
+      min-width: 1920px;
+      height: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
     .container{
       padding-bottom: 0;
       height: auto;
@@ -53,24 +85,34 @@
         display: inline-block;
         border-radius: 5px;
         background-color: #ffffff;
-        padding: 5px 36px 7px;
+        padding: 5px 10px 7px;
         text-align: center;
         margin-right: 19px;
+        width: 125px;
+        color: $fontBlack;
+
+        &:first-child{
+          // Style for "Прямоуголь"
+          width: 154px;
+          background-color: $green;
+          color: $white;
+        }
+        
         &:last-child{
           margin-right: 0;
           .lightTimerСaptionSpan{
-            min-width: 65px;
+            // min-width: 65px;
           } 
         }
       }
       .lightTimerСaptionSpan{
-        color: $fontBlack;
+        // color: $fontBlack;
         font-size: 15px;
         font-weight: 400;
         display: block;
       }
       .lightTimerNumberSpan{
-        color: $fontBlack;
+        // color: $fontBlack;
         font-size: 49px;
         font-weight: 700;
         line-height: 51px;
@@ -78,4 +120,113 @@
       }
     }
   }
+}
+
+
+
+
+@media all and(max-width: 1135px){
+  .jumbo_text_h{
+    font-size: 50px;
+  }
+  .jumbo_text_caption{
+    font-size: 14px;
+    max-width: 400px;
+  }
+  
+}
+
+@media all and(max-width: 1085px){
+  
+  .jumbo .running_img{
+    right: 150px; 
+  }
+  .jumbo_timer_clock{
+    .lightTimerСaptionSpan{
+      font-size: 11px;
+      line-height: 12px;
+    }
+    .lightTimerNumberSpan{
+      font-size: 30px;
+      line-height: 32px;
+    }
+    .lightTimerBlock{
+      padding-left: 21px;
+      padding-right: 21px;
+      width: 90px;
+      &:first-child{
+        width: 120px;
+      }
+      &:last-child{
+        .lightTimerСaptionSpan{
+        }
+      }
+    }
+  } 
+  
+}
+
+@media all and(max-width: 890px){
+  .jumbo .running_img{
+    right: 50px; 
+  }
+  .jumbo_text_caption{
+    max-width: 300px;
+  }
+}
+
+@media all and(max-width: 768px){
+  .jumbo{
+    min-height: 430px;
+    padding-bottom: 85px;
+    .running_img{
+      height: 330px;
+      bottom: 85px;
+      right: 10px;
+      img{
+        height: 100%;
+      }
+    }
+  }
+  .jumbo_timer{
+    background: $fontBlack;
+  }
+  .jumbo_timer{
+    bottom: 0;
+    
+    &_h{
+      display: none;
+    }
+    &_clock{
+      height: 85px;
+      padding-top: 15px;
+      text-align: center;
+      .lightTimerBlock{
+        width: 75px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-right: 13px;
+        &:first-child{
+          width: 93px;
+        }
+      }
+    }
+  }
+  .jumbo_text_bg{
+    height: 113px;
+    right: auto;
+    top: 27%;
+  }
+  .jumbo_text_h{
+    width: 181px;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+  .jumbo_text_caption{
+    color: $fontBlack;
+    font-size: 14px;
+  }
+  
 }

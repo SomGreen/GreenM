@@ -10,8 +10,12 @@
 	
 	<main class="home_page">
 		
-		<!-- <div class="jumbo">
+		<div class="jumbo">
+			
 			<div class="jumbo_text">
+				<div class="jumbo_text_bg">
+					<img src="img/jumbo_text_bg.png" alt="">
+				</div>
 				<div class="container">
 					<div class="jumbo_text_h">Зелёный Марафон</div>
 					<div class="jumbo_text_caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>
@@ -27,19 +31,24 @@
 					<div class="jumbo_timer_clock"></div>
 				</div>
 			</div>
-		</div> -->
+			
+			<div class="container running_container">
+				<div class="running_img"><img src="img/running_girl.png" alt=""></div>
+			</div>
+			
+		</div>
 		
 		<div class="registration">
-			<div class="container">
+			<div class="container reg_step_1">
 				<div class="registration_header">
 					<div class="site_h">Регистрация</div>
 					<div class="step_counter">
-						<span class="step_counter_h">Шаг</span> <span class="step_counter_item">1</span><span>/2</span>
+						<span class="step_counter_h">Шаг</span> <span class="step_counter_item">1</span><span>/3</span>
 					</div>
 				</div>
 				
 				<div class="registration_form">
-					<form action="">
+					<form action="" class="registration-form">
 						
 						<div class="registration_form_block">
 							<div class=" selectField requiredField">
@@ -85,25 +94,25 @@
 						</div>
 						<div class="registration_form_block">
 							<div class=" selectField requiredField">
-								<select name="status" id="" class="selectInput">
+								<select id="" class="selectInput" name="type_id">
 									<option value="-1">Выбор участника</option>
-									<option value="1">Несовершеннолетний</option>
-									<option value="2">Совершеннолетний</option>
+									<option value="1">Совершеннолетний</option>
+									<option value="2">Несовершеннолетний</option>
 									<option value="3">Совершеннолетний с ребенком</option>
 								</select>		
 							</div>
 						</div>
-						<div class="registration_form_block">
+						<div class="registration_form_block mob_gray">
 							<div class="formInput requiredField">
 								<input type="text" placeholder="Фамилия" class="inputField">
 							</div>
 						</div>
-						<div class="registration_form_block">
+						<div class="registration_form_block mob_gray">
 							<div class="formInput requiredField">
 								<input type="text" placeholder="Имя" class="inputField">
 							</div>
 						</div>
-						<div class="registration_form_block">
+						<div class="registration_form_block mob_gray">
 							<div class="formInput requiredField">
 								<input type="text" placeholder="Отчество" class="inputField">
 							</div>
@@ -155,66 +164,6 @@
 							
 						</div>
 						
-						
-						
-						<div class="hidden_form_wrapper">
-							<div class="hidden_form">
-								<div class="hidden_form_h">Персональная информация совершеннолетнего</div>
-								<div class="hidden_form_block">
-									<div class="registration_form_block">
-										<div class=" selectField requiredField hidenRequired">
-											<select name="status_1" id="" class="selectInput">
-												<option value="-1">Выбор участника</option>
-												<option value="1">Несовершеннолетний</option>
-												<option value="2">Совершеннолетний</option>
-												<option value="3">Совершеннолетний с ребенком</option>
-											</select>		
-										</div>
-									</div>
-									<div class="registration_form_block withTwoSelects">
-										<div class="withTwoSelects_container">	
-											<div class="selectField requiredField">
-												<select name="sex_1" id="" class="selectInput">
-													<option value="-1">Пол</option>
-													<option value="1">Мужской</option>
-													<option value="2">Женский</option>
-												</select>		
-											</div>
-										</div>
-										<div class="withTwoSelects_container">
-											<div class=" selectField requiredField">
-												<select name="age_1" id="" class="selectInput">
-													<option value="-1">Возраст</option>
-													<option value="1">20-25</option>
-													<option value="2">25-30</option>
-													<option value="3">30-35</option>
-												</select>		
-											</div>
-										</div>
-									</div>
-									<div class="registration_form_block"></div>
-									<div class="registration_form_block">
-										<div class="formInput requiredField">
-											<input type="text" placeholder="Фамилия" class="inputField">
-										</div>
-									</div>
-									<div class="registration_form_block">
-										<div class="formInput requiredField">
-											<input type="text" placeholder="Имя" class="inputField">
-										</div>
-									</div>
-									<div class="registration_form_block">
-										<div class="formInput requiredField">
-											<input type="text" placeholder="Отчество" class="inputField">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="add_kid_form_btn"><i class="fa fa-male" aria-hidden="true"></i><span>Добавить ребенка</span></div>
-						</div>
-						
-						
-						
 						<div class="registration_form_block">
 							<div class="registration_form_caption">Сотрудник Сбербанка:</div>
 							<div class=" radioField requiredField">
@@ -224,6 +173,439 @@
 								<label for="no">Нет</label>
 							</div>
 						</div>
+						
+						
+						<div class="registration_form_rules">
+							<div class="site_h">Согласие с правилами забега</div>
+							<div class="registration_form_rules_content">
+								<ol>
+									<li>1.   Настоящим подтверждаю свою физическую готовность к забегу на дистанцию в рамках Мероприятия, неблагоприятные последствия во время
+										и в связи с забегом беру на себя.
+									</li>
+									<li>В случае несчастного случая, получения травмы по моей вине или иного ухудшения состояния здоровья на забеге, претензий к организатору мероприятия иметь не буду.</li>
+									<li>Настоящим, являясь законным представителем (родителем, усыновителем, опекуном, попечителем, представителем по доверенности), подтверждаю физическую готовность несовершеннолетнего ребенка, указанного выше, к забегу на дистанцию в рамках Мероприятия, ответственность за неблагоприятные последствия вовремя и в связи с забегом беру на себя.</li>
+									<li>Я подтверждаю, что мне рекомендовано пройти медицинское обследование, в том числе в целях получения медицинского заключения об отсутствии медицинских противопоказаний для участия в забеге. </li>
+									<li>Настоящим даю свое согласие ПАО Сбербанк, адрес: 117997, г. Москва, ул. Вавилова, д.19 (далее – Банк) на обработку моих персональных данных (далее – ПДн), а также, являясь законным представителем (родителем, усыновителем, опекуном, попечителем) несовершеннолетнего/них ребенка/детей, даю свое согласие Банку на обработку ПДн моего/моих несовершеннолетнего/них ребенка/детей, указанных мной в регистрационной форме на сайте www.greenmarathon.ru, в том числе, но не ограничиваясь: ФИО, дата рождения, пол, домашний адрес, контактные данные (номера телефонов, адреса электронной почты), степень родства родитель, усыновитель, попечитель, опекун, для автоматизированной и неавтоматизированной обработки с совершением следующих действий: сбор, запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, обезличивание, блокирование, удаление, уничтожение.</li>
+									<li>Согласие дается на обработку в целях проведения Мероприятия. </li>
+									<li>Согласие действует с момента регистрации до 31 июля 2020 (включительно). </li>
+									<li>Согласие может быть отозвано путем подачи письменного заявления в Банк. </li>
+									<li>Я уведомлен, в том, что в случае отзыва согласия, мне будет отказано в участии в Мероприятии.</li>
+									<li> Я также предоставляю Банку право на создание в ходе проведения Мероприятия и использование в течение неограниченного срока в любой стране мира и без предоставления каких-либо компенсаций со стороны Банка фотографий, видеоматериалов, изображений или подобных материалов с моим участием и/или с участием моего/моих несовершеннолетнего/них ребенка/детей в рамках Мероприятия для использования в рекламных, коммерческих или иных целях, не противоречащих действующему законодательству РФ.</li>
+								</ol>
+							</div>
+						</div>
+						
+						
+						<div class="hidden_form_wrapper">
+							<div class="hidden_form" id="adult_form">
+								<div class="hidden_form_h">Персональная информация совершеннолетнего</div>
+								<div class="hidden_form_block">
+									<div class="registration_form_block">
+										<div class=" selectField requiredField">
+											<select class="selectInput" name="child[-1][who_you_id]">
+												<option value="-1">Кем вы являетесь ребенку?</option>
+												<option value="1">Родителем (законным представителем)</option>
+												<option value="2">Попечителем</option>
+												<option value="3">Опекуном</option>
+												<option value="4">Представителем по доверенности</option>
+											</select>
+										</div>
+									</div>
+									<div class="registration_form_block withTwoSelects">
+										<div class="withTwoSelects_container">
+											<div class="selectField requiredField">
+												<select class="selectInput" name="gender_id">
+													<option value="-1">Пол</option>
+													<option value="1">Мужской</option>
+													<option value="2">Женский</option>
+												</select>
+											</div>
+										</div>
+										<div class="withTwoSelects_container">
+											<div class=" selectField requiredField">
+												<select class="selectInput" name="age_id">
+													<option value="-1">Возраст</option>
+													<option value="1">18-20</option>
+													<option value="2">21-25</option>
+													<option value="3">26-30</option>
+													<option value="4">31-35</option>
+													<option value="5">36-40</option>
+													<option value="6">41-50</option>
+													<option value="7">51-60</option>
+													<option value="8">Более 60</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="registration_form_block"></div>
+									<div class="registration_form_block">
+										<div class="formInput requiredField">
+											<input type="text" placeholder="Фамилия" class="inputField" name="lastname">
+										</div>
+									</div>
+									<div class="registration_form_block">
+										<div class="formInput requiredField">
+											<input type="text" placeholder="Имя" class="inputField" name="firstname">
+										</div>
+									</div>
+									<div class="registration_form_block">
+										<div class="formInput requiredField">
+											<input type="text" placeholder="Отчество" class="inputField" name="middlename">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="hidden_form" id="children_form">
+								<div class="children-form children-form-0">
+									<div class="hidden_form_h">Персональная информация ребенка 1</div>
+									<div class="hidden_form_block">
+										<div class="registration_form_block">
+											<div class=" selectField requiredField">
+												<select class="selectInput" name="child[0][who_you_id]">
+													<option value="-1">Кем вы являетесь ребенку?</option>
+													<option value="1">Родителем (законным представителем)</option>
+													<option value="2">Попечителем</option>
+													<option value="3">Опекуном</option>
+													<option value="4">Представителем по доверенности</option>
+												</select>
+											</div>
+										</div>
+										<div class="registration_form_block withTwoSelects">
+											<div class="withTwoSelects_container">
+												<div class="selectField requiredField">
+													<select class="selectInput" name="child[0][gender_id]">
+														<option value="-1">Пол</option>
+														<option value="1">Мужской</option>
+														<option value="2">Женский</option>
+													</select>
+													
+												</div>
+											</div>
+											<div class=" selectField requiredField">
+												<div class="withTwoSelects_container">
+													<select class="selectInput" name="child[0][age]">
+														<option value="-1">Возраст</option>
+														<option value="1">7-9</option>
+														<option value="2">10-13</option>
+														<option value="3">14-18</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="registration_form_block"></div>
+										<div class="registration_form_block">
+											<div class="formInput requiredField">
+												<input type="text" placeholder="Фамилия" class="inputField"
+												name="child[0][lastname]">
+											</div>
+										</div>
+										<div class="registration_form_block">
+											<div class="formInput requiredField">
+												<input type="text" placeholder="Имя" class="inputField"
+												name="child[0][firstname]">
+											</div>
+										</div>
+										<div class="registration_form_block">
+											<div class="formInput requiredField">
+												<input type="text" placeholder="Отчество" class="inputField"
+												name="child[0][middlename]">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="children-form children-form-1">
+									<div class="hidden_form_h">Персональная информация ребенка 2</div>
+									<div class="hidden_form_block">
+										<div class="registration_form_block">
+											<div class=" selectField requiredField">
+												<select class="selectInput" name="child[1][who_you_id]">
+													<option value="-1">Кем вы являетесь ребенку?</option>
+													<option value="1">Родителем (законным представителем)</option>
+													<option value="2">Попечителем</option>
+													<option value="3">Опекуном</option>
+													<option value="4">Представителем по доверенности</option>
+												</select>
+											</div>
+										</div>
+										<div class="registration_form_block withTwoSelects">
+											<div class="withTwoSelects_container">
+												<div class="selectField requiredField">
+													<select class="selectInput" name="child[1][gender_id]">
+														<option value="-1">Пол</option>
+														<option value="1">Мужской</option>
+														<option value="2">Женский</option>
+														
+													</select>
+												</div>
+											</div>
+											<div class=" selectField requiredField">
+												<div class="withTwoSelects_container">
+													<select class="selectInput" name="child[1][age]">
+														<option value="-1">Возраст</option>
+														<option value="1">7-9</option>
+														<option value="2">10-13</option>
+														<option value="3">14-18</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="registration_form_block"></div>
+										<div class="registration_form_block">
+											<div class="formInput requiredField">
+												<input type="text" placeholder="Фамилия" class="inputField"
+												name="child[1][lastname]">
+											</div>
+										</div>
+										<div class="registration_form_block">
+											<div class="formInput requiredField">
+												<input type="text" placeholder="Имя" class="inputField"
+												name="child[1][firstname]">
+											</div>
+										</div>
+										<div class="registration_form_block">
+											<div class="formInput requiredField">
+												<input type="text" placeholder="Отчество" class="inputField"
+												name="child[1][middlename]">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="children-form children-form-2">
+									<div class="hidden_form_h">Персональная информация ребенка 3</div>
+									<div class="hidden_form_block">
+										<div class="registration_form_block">
+											<div class=" selectField requiredField">
+												<select class="selectInput" name="child[2][who_you_id]">
+													<option value="-1">Кем вы являетесь ребенку?</option>
+													<option value="1">Родителем (законным представителем)</option>
+													<option value="2">Попечителем</option>
+													<option value="3">Опекуном</option>
+													<option value="4">Представителем по доверенности</option>
+												</select>
+											</div>
+										</div>
+										<div class="registration_form_block withTwoSelects">
+											<div class="withTwoSelects_container">
+												<div class="selectField requiredField">
+													<select class="selectInput" name="child[2][gender_id]">
+														<option value="-1">Пол</option>
+														<option value="1">Мужской</option>
+														<option value="2">Женский</option>
+														
+													</select>
+												</div>
+											</div>
+											<div class=" selectField requiredField">
+												<div class="withTwoSelects_container">
+													<select class="selectInput" name="child[2][age]">
+														<option value="-1">Возраст</option>
+														<option value="1">7-9</option>
+														<option value="2">10-13</option>
+														<option value="3">14-18</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="registration_form_block"></div>
+										<div class="registration_form_block">
+											<div class="formInput requiredField">
+												<input type="text" placeholder="Фамилия" class="inputField"
+												name="child[2][lastname]">
+											</div>
+										</div>
+										<div class="registration_form_block">
+											<div class="formInput requiredField">
+												<input type="text" placeholder="Имя" class="inputField"
+												name="child[2][firstname]">
+											</div>
+										</div>
+										<div class="registration_form_block">
+											<div class="formInput requiredField">
+												<input type="text" placeholder="Отчество" class="inputField"
+												name="child[2][middlename]">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="children-form children-form-3">
+									<div class="hidden_form_h">Персональная информация ребенка 4</div>
+									<div class="hidden_form_block">
+										<div class="registration_form_block">
+											<div class=" selectField requiredField">
+												<select class="selectInput" name="child[3][who_you_id]">
+													<option value="-1">Кем вы являетесь ребенку?</option>
+													<option value="1">Родителем (законным представителем)</option>
+													<option value="2">Попечителем</option>
+													<option value="3">Опекуном</option>
+													<option value="4">Представителем по доверенности</option>
+												</select>
+											</div>
+										</div>
+										<div class="registration_form_block withTwoSelects">
+											<div class="withTwoSelects_container">
+												<div class="selectField requiredField">
+													<select class="selectInput" name="child[3][gender_id]">
+														<option value="-1">Пол</option>
+														<option value="1">Мужской</option>
+														<option value="2">Женский</option>
+													</select>
+													
+												</div>
+											</div>
+											<div class=" selectField requiredField">
+												<div class="withTwoSelects_container">
+													<select class="selectInput" name="child[3][age]">
+														<option value="-1">Возраст</option>
+														<option value="1">7-9</option>
+														<option value="2">10-13</option>
+														<option value="3">14-18</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="registration_form_block"></div>
+										<div class="registration_form_block">
+											<div class="formInput requiredField">
+												<input type="text" placeholder="Фамилия" class="inputField"
+												name="child[3][lastname]">
+											</div>
+										</div>
+										<div class="registration_form_block">
+											<div class="formInput requiredField">
+												<input type="text" placeholder="Имя" class="inputField"
+												name="child[3][firstname]">
+											</div>
+										</div>
+										<div class="registration_form_block">
+											<div class="formInput requiredField">
+												<input type="text" placeholder="Отчество" class="inputField"
+												name="child[3][middlename]">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="children-form children-form-4">
+									<div class="hidden_form_h">Персональная информация ребенка 5</div>
+									<div class="hidden_form_block">
+										<div class="registration_form_block">
+											<div class=" selectField requiredField">
+												<select class="selectInput" name="child[4][who_you_id]">
+													<option value="-1">Кем вы являетесь ребенку?</option>
+													<option value="1">Родителем (законным представителем)</option>
+													<option value="2">Попечителем</option>
+													<option value="3">Опекуном</option>
+													<option value="4">Представителем по доверенности</option>
+												</select>
+											</div>
+										</div>
+										<div class="registration_form_block withTwoSelects">
+											<div class="withTwoSelects_container">
+												<div class="selectField requiredField">
+													<select class="selectInput" name="child[4][gender_id]">
+														<option value="-1">Пол</option>
+														<option value="1">Мужской</option>
+														<option value="2">Женский</option>
+													</select>
+												</select>
+											</div>
+										</div>
+										<div class=" selectField requiredField">
+											<div class="withTwoSelects_container">
+												<select class="selectInput" name="child[4][age]">
+													<option value="-1">Возраст</option>
+													<option value="1">7-9</option>
+													<option value="2">10-13</option>
+													<option value="3">14-18</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="registration_form_block"></div>
+									<div class="registration_form_block">
+										<div class="formInput requiredField">
+											<input type="text" placeholder="Фамилия" class="inputField"
+											name="child[4][lastname]">
+										</div>
+									</div>
+									<div class="registration_form_block">
+										<div class="formInput requiredField">
+											<input type="text" placeholder="Имя" class="inputField"
+											name="child[4][firstname]">
+										</div>
+									</div>
+									<div class="registration_form_block">
+										<div class="formInput requiredField">
+											<input type="text" placeholder="Отчество" class="inputField"
+											name="child[4][middlename]">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="add_kid_form_btn"><i class="fa fa-male" aria-hidden="true"></i><span>Добавить ребенка</span>
+						</div>
+						
+					</div>
+					
+					<!-- <div class="hidden_form_wrapper">
+						<div class="hidden_form">
+							<div class="hidden_form_h">Персональная информация совершеннолетнего</div>
+							<div class="hidden_form_block">
+								<div class="registration_form_block">
+									<div class=" selectField requiredField hidenRequired">
+										<select name="status_1" id="" class="selectInput">
+											<option value="-1">Выбор участника</option>
+											<option value="1">Несовершеннолетний</option>
+											<option value="2">Совершеннолетний</option>
+											<option value="3">Совершеннолетний с ребенком</option>
+										</select>		
+									</div>
+								</div>
+								<div class="registration_form_block withTwoSelects">
+									<div class="withTwoSelects_container">	
+										<div class="selectField requiredField">
+											<select name="sex_1" id="" class="selectInput">
+												<option value="-1">Пол</option>
+												<option value="1">Мужской</option>
+												<option value="2">Женский</option>
+											</select>		
+										</div>
+									</div>
+									<div class="withTwoSelects_container">
+										<div class=" selectField requiredField">
+											<select name="age_1" id="" class="selectInput">
+												<option value="-1">Возраст</option>
+												<option value="1">20-25</option>
+												<option value="2">25-30</option>
+												<option value="3">30-35</option>
+											</select>		
+										</div>
+									</div>
+								</div>
+								<div class="registration_form_block"></div>
+								<div class="registration_form_block">
+									<div class="formInput requiredField">
+										<input type="text" placeholder="Фамилия" class="inputField">
+									</div>
+								</div>
+								<div class="registration_form_block">
+									<div class="formInput requiredField">
+										<input type="text" placeholder="Имя" class="inputField">
+									</div>
+								</div>
+								<div class="registration_form_block">
+									<div class="formInput requiredField">
+										<input type="text" placeholder="Отчество" class="inputField">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="add_kid_form_btn"><i class="fa fa-male" aria-hidden="true"></i><span>Добавить ребенка</span></div>
+					</div> -->
+					
+					
+					
+					<div class="justify_block">
 						<div class="registration_form_block">
 							<div class=" checkField requiredField">
 								<input type="checkbox" id="rules" class="checkboxField">
@@ -235,21 +617,189 @@
 								<button type="button">Далее</button>
 							</div>
 						</div>
-						
-						
+					</div>
+					
+				</form>
+			</div>
+			
+		</div> <!--container-->
+		
+		<div class="container reg_step_2">
+			<div class="registration_header">
+				<div class="site_h">Условия страхования участника</div>
+				<div class="step_counter">
+					<span class="step_counter_h">Шаг</span> <span class="step_counter_item">2</span><span>/3</span>
+				</div>
+			</div>
+			
+			<div class="step_two_content">
+				<div class="step_two_img">
+					<img src="img/step_two_logo.png" alt="">
+				</div>
+				<div class="step_two_text">Мы заботимся о каждом участнике забега, поэтому компания «Сбербанк страхование жизни» застраховала Вас от несчастного случая или получения травмы во время марафона. <a href="#!" class="site_link">Подробнее о страховании</a> </div>
+				<div class="step_two_form">
+					<form action="">
+						<div class="registration_form_block">
+							<div class=" checkField requiredField">
+								<input type="checkbox" id="rules" class="checkboxField">
+								<label for="rules">С правиласми страхования ознакомлен (-на)</label>
+							</div>
+						</div>
+						<div class="step_two_buttons">
+							<div class="registration_form_block">
+								<div class="backButton">
+									<button type="button">Назад</button>
+								</div>
+							</div>
+							<div class="registration_form_block">
+								<div class="formSubmit">
+									<button type="button">Далее</button>
+								</div>
+							</div>
+						</div>
 					</form>
 				</div>
-				
-			</div> <!--container-->
-		</div> <!--registration-->
+			</div>
+		</div> <!--container-->
 		
-	</main>
+		
+		<div class="container reg_step_3 registration_output">
+			<div class="registration_header">
+				<div class="site_h">Проверка регистрационных данных</div>
+				<div class="step_counter">
+					<span class="step_counter_h">Шаг</span> <span class="step_counter_item">3</span><span>/3</span>
+				</div>
+			</div>
+			
+			<div class="registration_output_content">
+				
+				<div class="registration_output_block">
+					<div class="registration_output_label">Ваш город</div>
+					<div class="registration_output_item"></div>
+				</div>
+				<div class="registration_output_block">
+					<div class="registration_output_label">Ваш город</div>
+					<div class="registration_output_item"></div>
+				</div>
+				<div class="registration_output_block">
+					<div class="registration_output_label">Ваш город</div>
+					<div class="registration_output_item"></div>
+				</div>
+				<div class="registration_output_block">
+					<div class="registration_output_label">Ваш город</div>
+					<div class="registration_output_item"></div>
+				</div>
+				<div class="registration_output_block">
+					<div class="registration_output_label">Ваш город</div>
+					<div class="registration_output_item"></div>
+				</div>
+				<div class="registration_output_block">
+					<div class="registration_output_label">Ваш город</div>
+					<div class="registration_output_item"></div>
+				</div>
+				<div class="registration_output_block withTwo">
+					<div class="registration_output_wrap">
+						<div class="registration_output_label">Ваш город</div>
+						<div class="registration_output_item"></div>
+					</div>
+					<div class="registration_output_wrap">
+						<div class="registration_output_label">Ваш город</div>
+						<div class="registration_output_item"></div>
+					</div>
+				</div>
+				<div class="registration_output_block">
+					<div class="registration_output_label">Ваш город</div>
+					<div class="registration_output_item"></div>
+				</div>
+				<div class="registration_output_block">
+					<div class="registration_output_label">Ваш город</div>
+					<div class="registration_output_item"></div>
+				</div>
+				
+			</div>
+
+			<div class="registration_output_kid">
+				<div class="registration_output_kid_h">Ребенок №1</div>
+
+				<div class="registration_output_content">
+
+					<div class="registration_output_block">
+						<div class="registration_output_label">Ваш город</div>
+						<div class="registration_output_item"></div>
+					</div>
+					<div class="registration_output_block">
+						<div class="registration_output_label">Ваш город</div>
+						<div class="registration_output_item"></div>
+					</div>
+					<div class="registration_output_block">
+						<div class="registration_output_label">Ваш город</div>
+						<div class="registration_output_item"></div>
+					</div>
+					<div class="registration_output_block withTwo">
+						<div class="registration_output_wrap">
+							<div class="registration_output_label">Ваш город</div>
+							<div class="registration_output_item"></div>
+						</div>
+						<div class="registration_output_wrap">
+							<div class="registration_output_label">Ваш город</div>
+							<div class="registration_output_item"></div>
+						</div>
+					</div>
+					<div class="registration_output_block">
+						<div class="registration_output_label">Ваш город</div>
+						<div class="registration_output_item"></div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="registration_output_kid">
+				<div class="registration_output_kid_h">Ребенок №1</div>
+
+				<div class="registration_output_content">
+
+					<div class="registration_output_block">
+						<div class="registration_output_label">Ваш город</div>
+						<div class="registration_output_item"></div>
+					</div>
+					<div class="registration_output_block">
+						<div class="registration_output_label">Ваш город</div>
+						<div class="registration_output_item"></div>
+					</div>
+					<div class="registration_output_block">
+						<div class="registration_output_label">Ваш город</div>
+						<div class="registration_output_item"></div>
+					</div>
+					<div class="registration_output_block withTwo">
+						<div class="registration_output_wrap">
+							<div class="registration_output_label">Ваш город</div>
+							<div class="registration_output_item"></div>
+						</div>
+						<div class="registration_output_wrap">
+							<div class="registration_output_label">Ваш город</div>
+							<div class="registration_output_item"></div>
+						</div>
+					</div>
+					<div class="registration_output_block">
+						<div class="registration_output_label">Ваш город</div>
+						<div class="registration_output_item"></div>
+					</div>
+
+				</div>
+			</div>
+			
+		</div>
+		
+		
+	</div> <!--registration-->
 	
-	<!-- //= templates/_footer.html -->
-	
-	
-	
-	//= templates/_js.html
+</main>
+
+<!-- //= templates/_footer.html -->
+
+
+
+//= templates/_js.html
 </body>
 </html>
 

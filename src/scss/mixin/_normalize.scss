@@ -16,7 +16,8 @@ body{
   // font-family: 'Roboto', sans-serif;
   font-family: 'SBSansUI';
   font-weight: 400;
-
+  max-width: 1920px;
+  margin: 0 auto;
   // @include flex;
   // flex-direction: column;
 }

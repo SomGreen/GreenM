@@ -27,3 +27,133 @@
   height: 100%;
   cursor: pointer;
 }
+
+.radioField{
+  display: inline-block;
+  vertical-align: middle;
+  input{
+    display: none;
+    &:checked + label{
+      &:before{
+        border: 2px solid $borderGreen;;
+      }
+      &:after{
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 20px;
+        position: absolute;
+        top: 8px;
+        left: 5px;
+        background: $borderGreen;;
+        @include transition(0.25, ease);
+      }
+    }
+  }
+  label{
+    margin-right: 17px;
+    padding-left: 23px;
+    position: relative;
+    &:before{
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-radius: 18px;
+      border: 2px solid #999999;
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 0;
+      @include transition(0.25, ease);
+    }
+  }
+  
+}
+
+.checkField{
+  input{
+    display: none;
+    &:checked + label{
+      &:before{
+        border: 2px solid $borderGreen;;
+      }
+      &:after{
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        position: absolute;
+        top: 5px;
+        left: 4px;
+        background: $borderGreen;
+        @include transition(0.25, ease);
+      }
+    }
+  }
+  label{
+    color: #999999;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    padding-left: 23px;
+    &:before{
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-radius: 2px;
+      border: 2px solid $fontBlack;
+      display: block;
+      margin-top: 1px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include transition(0.25, ease);
+    }
+    &.error{
+      &:before{
+        border: 2px solid red;
+      }
+    }
+  }
+}  
+
+
+.site_link{
+  color: $borderGreen;
+  text-decoration: underline;
+}
+
+
+.justify_block{
+  text-align: justify;
+  font-size: 0;
+  &:after{
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.registration-form #adult_form,
+.registration-form #children_form,
+.registration-form .add_kid_form_btn{
+  display: none;
+}
+#children_form .children-form{
+  display: none;
+}
+#children_form .children-form.active {
+  display: block;
+}
