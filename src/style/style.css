@@ -225,17 +225,20 @@ img {
     width: 100%;
     display: inline-block; }
 
+/*
 .registration-form #adult_form,
 .registration-form #children_form,
-.registration-form .add_kid_form_btn {
-  display: none; }
-
-#children_form .children-form {
-  display: none; }
-
+.registration-form .add_kid_form_btn{
+  display: none;
+}
+#children_form .children-form{
+  display: none;
+}
 #children_form .children-form.active {
-  display: block; }
+  display: block;
+}
 
+*/
 .header {
   position: absolute;
   width: 100%;
@@ -607,6 +610,17 @@ img {
         position: absolute;
         bottom: -7px;
         left: 0; }
+  .registration_end {
+    text-align: center; }
+    .registration_end .site_h {
+      margin-bottom: 20px; }
+    .registration_end_block b {
+      font-weight: 600; }
+    .registration_end_block p {
+      margin-top: 5px; }
+      .registration_end_block p span {
+        color: #08a652;
+        font-weight: 600; }
 
 .hidden_form {
   border-top: 2px solid #08a652;

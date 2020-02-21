@@ -269,249 +269,267 @@
             }
           }
         }
-        }
-        &_label{
-          padding-left: 21px;
-          // Style for "Ваш город"
-          color: #999999; 
-          font-size: 14px;
-          font-weight: 400;
-          margin-bottom: 8px;
-        }
-        &_item{
-          border: 1px solid #ced1d5;
-          border-radius: 4px;
-          background-color: #ffffff;
-          color: $fontBlack;
-          font-size: 18px;
-          font-weight: 400;
-          padding: 21px;
-        }
-
-        &_kid{
-          margin-top: 38px;
-          &_h{
-            padding-right: 20px;
-            position: relative;
-            color: $fontBlack;
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            &:after{
-              content: '';
-              // width: 100%;
-              width: 165px;
-              height: 2px;
-              background-color: $borderGreen;
-              position: absolute;
-              bottom: -7px;
-              left: 0;
-            }
-          }
-        }
       }
-    }
-    
-    .hidden_form{
-      border-top: 2px solid $borderGreen;
-      padding-top: 57px;
-      &_wrapper{
-        padding: 26px 15px 0px;
-      }
-      &_h{
-        color: #999999;
-        font-size: 16px;
+      &_label{
+        padding-left: 21px;
+        // Style for "Ваш город"
+        color: #999999; 
+        font-size: 14px;
         font-weight: 400;
+        margin-bottom: 8px;
       }
-      &_block{
-        margin-left: -15px;
-        margin-right: -15px;
-      }
-    }
-    .add_kid_form_btn{
-      font-size: 18px;
-      text-align: center;
-      line-height: 48px;
-      background-color: #f2f2f2;
-      margin-top: 15px;
-      margin-bottom: 19px;
-      cursor: pointer;
-      i{
-        color: $borderGreen;
-        margin-right: 5px;
-      }
-      span{
-        color: $fontBlack;
-        font-weight: 300;
-      }
-    }
-    
-    
-    .formInput{
-      input{
-        width: 100%;
-        height: 56px;
-        border-radius: 4px;
+      &_item{
         border: 1px solid #ced1d5;
+        border-radius: 4px;
         background-color: #ffffff;
-        padding: 20px;
         color: $fontBlack;
         font-size: 18px;
-        font-weight: 300;
-      }
-    }
-    .formSubmit{
-      button{
-        width: 100%;
-        height: 55px;
-        border-radius: 4px;
-        background-color: $fontBlack;
-        color: $white;
-        font-size: 24px;
         font-weight: 400;
+        padding: 21px;
       }
-    }
-    
-    
-    .select_dropdown{
-      // height: 56px;
-      min-height: 56px;
-      background-color: #ffffff;
-      .dropdown_caption{
-        border-radius: 4px;
-        border: 1px solid #ced1d5;
-        position: relative;
-        padding-right: 65px;
-        @include transition(0.25s, ease);
-        &.active{
-          border-radius: 4px 4px 0 0;
-          // border-bottom: none;
-        }
-        &:before{
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          height: 100%;
-          width: 55px;
-          border-left: 1px solid #ced1d5;
-        }
-        &:after{
-          // content: '\f078';
-          // font-family: 'FontAwesome';
-          // font-size: 14px;
-          content: '';
-          width: 12px;
-          height: 12px;
-          // background-color: $borderGreen;
-          border-left: 3px solid $borderGreen;
-          border-bottom: 3px solid $borderGreen;
-          display: block;
-          position: absolute;
-          top: 50%;
-          right: 20px;
-          @include transform(translate(0, -70%) rotate(-45deg))
-        }
-      }
-      .dropdown_list{
-        border-top: none;
-      }
-    }
-    
-    
-    
-    
-    .step_two{
-      &_content{
-        margin-top: 60px;
-      }
-      &_img{
-        margin-bottom: 24px;
-        img{
-          max-width: 100%;
-        }
-      }
-      &_text{
-        max-width: 642px;
-        margin-bottom: 28px;
-      }
-      &_form{
-        .registration_form_block{
-          padding: 0;
-          label{
-            color: $fontBlack;
+      
+      &_kid{
+        margin-top: 38px;
+        &_h{
+          padding-right: 20px;
+          position: relative;
+          color: $fontBlack;
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 30px;
+          &:after{
+            content: '';
+            // width: 100%;
+            width: 165px;
+            height: 2px;
+            background-color: $borderGreen;
+            position: absolute;
+            bottom: -7px;
+            left: 0;
           }
         }
       }
-      &_buttons{
-        padding-top: 137px;
-        text-align: justify;
-        font-size: 0;
-        margin-left: -15px;
-        margin-right: -15px;
-        &:after{
-          content: '';
-          width: 100%;
-          display: inline-block;
+    } // registration_output
+    &_end{
+      text-align: center;
+      .site_h{
+        margin-bottom: 20px;
+      }
+      &_block{
+        b{
+          font-weight: 600;
         }
-        .registration_form_block{
-          padding: 13px 15px;
+        p{
+          margin-top: 5px;
+          span{
+            color: $borderGreen;
+            font-weight: 600;
+          }
         }
       }
     }
-    .backButton{
-      button{
-        width: 100%;  
-        height: 56px;
-        border-radius: 4px;
-        border: 1px solid #ced1d5;
-        background-color: #f8f8f8;
-        color: $fontBlack;
-        
-        font-size: 24px;
-        font-weight: 400;
+  }
+  
+  .hidden_form{
+    border-top: 2px solid $borderGreen;
+    padding-top: 57px;
+    &_wrapper{
+      padding: 26px 15px 0px;
+    }
+    &_h{
+      color: #999999;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    &_block{
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+  .add_kid_form_btn{
+    font-size: 18px;
+    text-align: center;
+    line-height: 48px;
+    background-color: #f2f2f2;
+    margin-top: 15px;
+    margin-bottom: 19px;
+    cursor: pointer;
+    i{
+      color: $borderGreen;
+      margin-right: 5px;
+    }
+    span{
+      color: $fontBlack;
+      font-weight: 300;
+    }
+  }
+  
+  
+  .formInput{
+    input{
+      width: 100%;
+      height: 56px;
+      border-radius: 4px;
+      border: 1px solid #ced1d5;
+      background-color: #ffffff;
+      padding: 20px;
+      color: $fontBlack;
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+  .formSubmit{
+    button{
+      width: 100%;
+      height: 55px;
+      border-radius: 4px;
+      background-color: $fontBlack;
+      color: $white;
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+  
+  
+  .select_dropdown{
+    // height: 56px;
+    min-height: 56px;
+    background-color: #ffffff;
+    .dropdown_caption{
+      border-radius: 4px;
+      border: 1px solid #ced1d5;
+      position: relative;
+      padding-right: 65px;
+      @include transition(0.25s, ease);
+      &.active{
+        border-radius: 4px 4px 0 0;
+        // border-bottom: none;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 55px;
+        border-left: 1px solid #ced1d5;
+      }
+      &:after{
+        // content: '\f078';
+        // font-family: 'FontAwesome';
+        // font-size: 14px;
+        content: '';
+        width: 12px;
+        height: 12px;
+        // background-color: $borderGreen;
+        border-left: 3px solid $borderGreen;
+        border-bottom: 3px solid $borderGreen;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        @include transform(translate(0, -70%) rotate(-45deg))
       }
     }
-    
-    
-
-    
-    @media all and(max-width: 1085px){
-      .registration_output_block,
+    .dropdown_list{
+      border-top: none;
+    }
+  }
+  
+  
+  
+  
+  .step_two{
+    &_content{
+      margin-top: 60px;
+    }
+    &_img{
+      margin-bottom: 24px;
+      img{
+        max-width: 100%;
+      }
+    }
+    &_text{
+      max-width: 642px;
+      margin-bottom: 28px;
+    }
+    &_form{
       .registration_form_block{
-        width: 50%;
-      }
-      .hidden_form_block{
-        .registration_form_block:nth-child(3){
-          display: none;
+        padding: 0;
+        label{
+          color: $fontBlack;
         }
       }
-
     }
-    
-    @media all and(max-width: 768px){
-      .registration_form_rules{
-        padding-left: 15px;
-      }
-      .registration_output_block,
-      .registration_form_block{
+    &_buttons{
+      padding-top: 137px;
+      text-align: justify;
+      font-size: 0;
+      margin-left: -15px;
+      margin-right: -15px;
+      &:after{
+        content: '';
         width: 100%;
-        &.mob_gray{
-          background-color: #f2f2f2;
-        }
-        .registration_form_caption{
-          margin-bottom: 10px;
-        }
-        .registration_form_caption,
-        .radioField{
-          width: 100%;
-          text-align: center;
-        }
-        .checkField{
-          text-align: center;
-        }
+        display: inline-block;
       }
-      .step_two_img{
-        padding-right: 15px;
+      .registration_form_block{
+        padding: 13px 15px;
       }
     }
+  }
+  .backButton{
+    button{
+      width: 100%;  
+      height: 56px;
+      border-radius: 4px;
+      border: 1px solid #ced1d5;
+      background-color: #f8f8f8;
+      color: $fontBlack;
+      
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+  
+  
+  
+  
+  @media all and(max-width: 1085px){
+    .registration_output_block,
+    .registration_form_block{
+      width: 50%;
+    }
+    .hidden_form_block{
+      .registration_form_block:nth-child(3){
+        display: none;
+      }
+    }
+    
+  }
+  
+  @media all and(max-width: 768px){
+    .registration_form_rules{
+      padding-left: 15px;
+    }
+    .registration_output_block,
+    .registration_form_block{
+      width: 100%;
+      &.mob_gray{
+        background-color: #f2f2f2;
+      }
+      .registration_form_caption{
+        margin-bottom: 10px;
+      }
+      .registration_form_caption,
+      .radioField{
+        width: 100%;
+        text-align: center;
+      }
+      .checkField{
+        text-align: center;
+      }
+    }
+    .step_two_img{
+      padding-right: 15px;
+    }
+  }

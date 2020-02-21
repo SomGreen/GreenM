@@ -152,7 +152,7 @@ $('body').on('click', '.formSubmit button', function(e) {
 $('.telInput input').mask('9(999)999-99-99');
 
 
-/**/
+/*
 var formClass = ".registration-form";
 function regSelect(select) {
   return $(formClass + " " + select);
@@ -239,6 +239,6 @@ function funcAddChildren() {
 }
 $('.registration-form select[name="type_id"]').on('change', funcActionSelectType);
 regSelect("").on("click", ".add_kid_form_btn", funcAddChildren);
-/**/
+*/
 
 /* registration form END */
