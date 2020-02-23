@@ -1,3 +1,10 @@
+//for partners slider on home page
+var destroy = true;
+
+
+$(document).ready(function(){
+
+
 /* timer */
 if($('div').is('.jumbo_timer_clock')){
   $('.jumbo_timer_clock').lightTimer({
@@ -242,3 +249,25 @@ regSelect("").on("click", ".add_kid_form_btn", funcAddChildren);
 */
 
 /* registration form END */
+
+
+
+/* first slider */
+  $('.big_slider_content').slick({
+    slideToShow: 1,
+    slideToScroll: 1,
+    arrows: true
+  });
+/* first slider END */
+
+
+slideDetect();
+
+$(window).resize(function() {
+   slideDetect()
+});
+
+
+
+ 
+});

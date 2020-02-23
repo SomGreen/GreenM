@@ -134,9 +134,20 @@
   }
 }
 
+.float_left{
+  float: left;
+}
 
-
-
+.float_right{
+  float: right;
+}
+.clear_fix{
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
 
 
 

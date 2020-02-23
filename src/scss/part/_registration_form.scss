@@ -254,6 +254,7 @@
       &_block{
         width: 33.33%;
         display: inline-block;
+        vertical-align: bottom;
         padding: 13px 15px;
         &.withTwo{
           // padding: 0;
@@ -285,7 +286,7 @@
         color: $fontBlack;
         font-size: 18px;
         font-weight: 400;
-        padding: 21px;
+        padding: 16px 21px;
       }
       
       &_kid{

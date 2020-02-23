@@ -147,7 +147,10 @@ gulp.task('allCss', function () {
 gulp.task('allJs', function () {
  return gulp.src([
       prefix+'src/vendor/jquery/jquery-3.3.1.js',
+      prefix+'src/vendor/jquery/jquery.maskedinput.min.js',
       prefix+'src/vendor/customScrollBar/customScrollBar.js',
+      prefix+'src/vendor/slick_slider/slick.min.js',
+      prefix+'src/vendor/lightTimer/lightTimer.js',
       path.tempBuild.js+'main.js'
     ])
     .pipe(plumber())
@@ -245,6 +248,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.parallel('html', 'scripts', 'allJs', 'image', 'fonts', 'sass', 'allCss', 'serve', 'watch'));
 
+gulp.task('front', gulp.series('html', 'scripts', 'allJs', 'sass', 'allCss', 'fonts', 'image')); 
 
 
 

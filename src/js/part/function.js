@@ -63,3 +63,22 @@ function validateField(inputFieldContainer) {
 	return valid;
 
 }
+
+
+function slideDetect() {
+  if ($(window).outerWidth() > 991 && !destroy) {             
+     $('.partners_slider').slick('unslick');
+     destroy = true;
+  } else if ($(window).outerWidth() < 992 && destroy) {
+     $('.partners_slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: false,
+      dots: false,
+      arrows: false,
+      variableWidth: true
+    });
+
+    destroy = false;
+  }
+}

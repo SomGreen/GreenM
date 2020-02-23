@@ -90,7 +90,7 @@
         margin-right: 19px;
         width: 125px;
         color: $fontBlack;
-
+        
         &:first-child{
           // Style for "Прямоуголь"
           width: 154px;
@@ -229,4 +229,256 @@
     font-size: 14px;
   }
   
+}
+
+
+.about_project{
+  background-color: rgba(8, 166, 82, 0.45);
+  padding: 61px 0 80px;
+  .container{
+    
+  }
+  .site_h{
+    margin-bottom: -35px;
+  }
+  &_row{
+    margin-bottom: 43px;
+    font-size: 0;
+    max-width: 100%;
+    & > div{
+      display: inline-block;
+      vertical-align: top;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &.left_img{
+      .about_project_img{
+        padding-right: 15px;
+      }
+      .about_project_text{
+        padding-left: 15px;
+      }  
+    }
+    &.right_img{
+      position: relative;
+      .about_project_img{
+        padding-left: 15px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        max-height: 300px;
+      }
+      .about_project_text{
+        padding-right: 15px;
+        padding-top: 61px;
+      }
+    }
+  }
+  &_img{
+    width: 50%;
+    
+    img{
+      width: 100%;
+    }
+  }
+  &_text{
+    color: $fontBlack;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    width: 50%;
+    
+    p{
+      margin-bottom: 40px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+}
+
+
+
+
+@media all and (max-width: 991px){
+  .about_project{
+    background-color: rgba(8, 166, 82, 0.45);
+    padding: 43px 0 30px;
+    .container{
+      
+    }
+    .site_h{
+      margin-bottom: 32px;
+    }
+    &_row{
+      margin-bottom: 20px;
+      & > div{
+        display: block;
+      }
+      &.left_img{
+        .about_project_img{
+          padding: 0;
+        }
+        .about_project_text{
+          padding: 0;
+        }  
+      }
+      &.right_img{
+        position: relative;
+        .about_project_img{
+          position: static;
+          max-height: none;
+          padding: 0;
+        }
+        .about_project_text{
+          
+          padding: 0px;
+        }
+      }
+    }
+    &_img{
+      width: 100%;
+      margin-bottom: 20px;
+      
+      img{
+        width: 100%;
+      }
+    }
+    &_text{
+      color: $fontBlack;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      width: 100%;
+      
+      p{
+        margin-bottom: 20px;
+      }
+    }
+    
+  }
+  
+}
+
+
+
+
+
+.big_slider{
+  padding: 68px 34px 54px;
+  &_content{
+    .slick-arrow{
+      background-color: $borderGreen;
+      width: 73px;
+      height: 73px;
+      // position: relative;
+      z-index: 10;
+      bottom: -16px;
+      top: auto;  
+      &:before{
+        // display: none;
+        font-size: 0;
+        width: 50px;
+        height: 50px;
+        display: block;
+        background-color: #f8f8f8;
+        opacity: 1;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // @include translate(-50%, -50%);
+        @include translate(20%, 0%);
+      }
+      &.slick-prev{
+        left: auto;
+        right: 55px;
+        &:before{
+          background: #f8f8f8 url('../img/big_slider_arrow_prev.png') 50% 50% no-repeat;
+        }
+      }
+      &.slick-next{
+        right: 0px;
+        width: 68px;
+        &:before{
+          background: #f8f8f8 url('../img/big_slider_arrow_next.png') 50% 50% no-repeat;
+        }
+      }
+    }
+  }
+  &_img{
+    position: relative;
+    padding-bottom: 56.45%;
+    overflow: hidden;
+    img{
+      position: absolute;
+      height: 100%;
+      left: 50%;
+      @include translate(-50%, 0%);
+    }
+  }
+}
+@media all and (max-width: 768px){
+  .big_slider{
+    padding: 36px 0 44px;
+  }
+}
+
+
+
+
+.partners{
+  padding-bottom: 51px;
+  .container{
+  }
+  &_content{
+    padding-top: 53px;
+    border-top: 1px solid #ced1d5;
+  }
+  .site_h{
+    margin-bottom: 38px;
+  }
+  &_slider{
+    margin-left: -15px;
+    margin-right: -15px;
+    font-size: 0;
+    &_item{
+      font-size: 14px;
+      width: 100%;
+      height: 215px;
+      border-radius: 3px;
+      border: 1px solid #ced1d5;
+      background-color: #ffffff;
+      position: relative;
+      &_wrapper{
+        padding: 15px;
+        width: 33.33%;
+        display: inline-block;
+      }
+    }
+    &_img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%, -50%);
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+@media all and (max-width: 991px){
+  .partners_slider_item{
+    height: 100%;
+    &_wrapper{
+      display: block;
+      width: 304px;
+      height: 194px;
+    }
+  }
+  .partners_slider_img{
+    width: 77%;
+  }
 }

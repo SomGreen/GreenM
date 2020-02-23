@@ -129,20 +129,120 @@
               top: 50%;
               right: 0;
               @include translate(0, -50%);
-
+              
             }
           }
         }
       }
     }
+    &_mob{
+      display: none;
+      height: 62px;
+      padding-top: 21px;
+      .menu_btn{
+        padding-left: 43px;
+        position: relative;
+        height: 22px;
+        &_icon{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 27px;
+          height: 100%;
+          span{
+            width: 27px;
+            height: 3px;
+            background: #000;
+            display: block;
+            margin-bottom: 7px;
+            &:last-child{
+              margin-bottom: 0;
+            }
+          }
+        }
+        &_caption{
+          font-size: 16px;
+          color: $fontBlack;
+        }
+      }
+    }
   }
-
-
+  
+  
   @media all and(max-width: 890px){
     .header{
-      display: none;
+      &_top_right{
+        display: none;
+      }
+      &_top_left{
+        width: 100%;
+        text-align: justify;
+        font-size: 0;
+        &:after{
+          content: '';
+          display: inline-block;
+          width: 100%;
+        }
+      }
+      &_logo{
+        // width: 33.33%;
+        margin: 0 !important;
+        &:nth-child(1){
+          text-align: left;
+        }
+        &:nth-child(2){
+          text-align: center;
+          // float: right;
+        }
+        &:nth-child(3){
+          text-align: right;
+          
+        }
+        img{
+          max-width: 100%;
+          
+        }
+      }
+      &_mob{
+        display: block;
+      }
+      &_bottom{
+        position: absolute;
+        z-index: 50;
+        background-color: #f8f8f8;
+        width: 100%;
+        top: 62px;
+
+        display: none;
+      }
+      &_nav{
+        &_item{
+          display: block;
+          padding: 10px 0;
+          position: relative;
+          &:after{
+            content: '\f054';
+            font-family: 'FontAwesome';
+            font-size: 16px;
+            color: #999999;
+            float: right;
+          }
+        }
+      }
     }
     main{
-      padding-top: 0;
+      // padding-top: 0;
     }
   }
+  
+  
+  
+  
+  @media all and (max-width: 502px){
+    .header_logo{
+      img{
+        max-height: 37px;
+      }
+    } 
+  }
+  
