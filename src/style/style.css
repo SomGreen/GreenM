@@ -346,6 +346,19 @@ img {
       vertical-align: middle;
       position: relative;
       padding: 25px 0 21px; }
+      .header_nav_item:first-child {
+        padding-left: 25px; }
+        .header_nav_item:first-child:before {
+          content: '\f015';
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          color: #19bb4f;
+          font-size: 14px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          -webkit-transform: translate(0, -35%);
+          transform: translate(0, -35%); }
       .header_nav_item.with_list .header_nav_item__link {
         position: relative;
         padding-right: 15px; }
