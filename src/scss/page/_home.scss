@@ -469,7 +469,13 @@
     }
   }
 }
-@media all and (max-width: 991px){
+@media all and (max-width: 1230px){
+  .big_slider{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+  @media all and (max-width: 991px){
   .partners_slider_item{
     height: 100%;
     &_wrapper{

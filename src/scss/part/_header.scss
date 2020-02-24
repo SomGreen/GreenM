@@ -2,6 +2,7 @@
   position: absolute;
   width: 100%;
   background: $white;
+  z-index: 15;
   &_top{
     border-bottom: 1px solid #ced1d5;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.11);
@@ -72,13 +73,15 @@
         padding: 0;
         padding-right: 10px;
         &:after{
-          content: '\f0d7';
-          font-family: 'FontAwesome';
+          content: '\f0dd';
+          // font-family: 'FontAwesome';
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
           font-size: 14px;
           color: #999999;
           border: none;
-          -webkit-transform: translate(0, -45%) rotate(0deg);
-          transform: translate(0, -45%) rotate(0deg);
+          -webkit-transform: translate(0, -65%) rotate(0deg);
+          transform: translate(0, -65%) rotate(0deg);
           position: absolute;
           top: 50%;
           right: 0px;
@@ -98,9 +101,11 @@
   }
   
   &_bottom{
-    padding: 25px 0 21px;
+    // padding: 25px 0 21px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.11);
     border: 1px solid #ced1d5;
+    // position: relative;
+    // z-index: 15;
   }
   &_nav{
     font-size: 0;
@@ -114,24 +119,63 @@
       &_item{
         display: inline-block;
         vertical-align: middle;
-        &__link{
-          text-transform: uppercase;
-          font-size: 14px;
-          &.with_list{
+        position: relative;
+        padding: 25px 0 21px;
+        
+        &.with_list{
+          .header_nav_item__link{
             position: relative;
             padding-right: 15px;
             &:after{
-              content: '\f0d7';
-              font-family: 'FontAwesome';
+              content: '\f0dd';
+              font-family: 'Font Awesome 5 Free';
+              font-weight: 900;
               color: $green;
-              font-size: 14px;
+              font-size: 18px;
               position: absolute;
               top: 50%;
               right: 0;
-              @include translate(0, -50%);
+              @include translate(0, -75%);
               
             }
           }
+          &:hover{
+            .submenu_list_container{
+              display: block;
+            }
+          }
+        }
+        .submenu_list{
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 56px;
+          &:last-child{
+            margin-right: 0;
+          }
+          &_container{
+            position: absolute;
+            z-index: -1;
+            padding: 40px 26px 26px;
+            background-color: #ffffff;
+            width: 474px;
+            left: -25px;
+            display: none;
+            &:hover{
+              display: block;
+            }
+          }
+          &__item{
+            color: #000000;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 48px;
+            text-transform: uppercase;
+          }
+        }
+        &__link{
+          text-transform: uppercase;
+          font-size: 14px;
+          
         }
       }
     }
@@ -143,6 +187,25 @@
         padding-left: 43px;
         position: relative;
         height: 22px;
+        &.active{
+          .menu_btn_icon{
+            span{
+              background: #999999;
+              &:nth-child(1){
+                @include transform(rotate(45deg));
+              }
+              &:nth-child(2){
+                opacity: 0;
+              }
+              &:nth-child(3){
+                @include transform(rotate(-45deg));
+              }
+            }
+          }
+          .menu_btn_caption{
+            color: $borderGreen;
+          }
+        }
         &_icon{
           position: absolute;
           top: 0;
@@ -155,6 +218,15 @@
             background: #000;
             display: block;
             margin-bottom: 7px;
+            @include transition(0.25s, ease);
+            &:nth-child(1){
+              @include origin(0% 100%);
+            }
+            &:nth-child(3){
+              @include origin(0% 0%);
+            }
+            
+
             &:last-child{
               margin-bottom: 0;
             }
@@ -163,14 +235,41 @@
         &_caption{
           font-size: 16px;
           color: $fontBlack;
+          @include transition(0.25s, ease);
         }
       }
     }
   }
   
+  .registration_mob_link{
+    display: none;
+  }
   
-  @media all and(max-width: 890px){
+  @media all and(max-width: 930px){
     .header{
+      .helpers_block{
+        &_item{
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          border-radius: 4px;
+          background-color: $borderGreen;
+          color: #ffffff;
+          font-family: "Font Awesome 5 Free";
+          font-size: 11px;
+          font-weight: 900;
+          position: relative;
+          float: right;
+          margin-left: 7px;
+          margin-top: -28px;
+          i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include translate(-50%, -50%);
+          }
+        }
+      }
       &_top_right{
         display: none;
       }
@@ -212,7 +311,9 @@
         background-color: #f8f8f8;
         width: 100%;
         top: 62px;
-
+        // min-height: 500px;
+        padding-top: 27px;
+        padding-bottom: 186px;
         display: none;
       }
       &_nav{
@@ -221,12 +322,49 @@
           padding: 10px 0;
           position: relative;
           &:after{
-            content: '\f054';
-            font-family: 'FontAwesome';
+            content: '\f105';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
             font-size: 16px;
             color: #999999;
             float: right;
           }
+          .submenu_list{
+            display: block;
+            &_container{
+              background: #f8f8f8;
+              position: static;
+              padding: 10px 20px;
+            }
+            &__item{
+              padding: 10px 0;
+              line-height: 18px;
+            }
+          }
+        }
+      }
+    }
+    .registration_mob_link{
+      display: block;
+      margin-right: -15px;
+      margin-left: -15px;
+      // position: relative;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      a{
+        display: block;
+        border-top: 1px solid #ced1d5;
+        padding: 25px 15px;
+        &:after{
+          content: '\f105';
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          font-size: 16px;
+          color: $borderGreen;
+          // position: absolute;
+          margin-top: 2px;
+          float: right;
         }
       }
     }
@@ -238,7 +376,7 @@
   
   
   
-  @media all and (max-width: 502px){
+  @media all and (max-width: 550px){
     .header_logo{
       img{
         max-height: 37px;
