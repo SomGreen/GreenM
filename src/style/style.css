@@ -1409,7 +1409,8 @@ img {
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
       .partners_slider_img img {
-        width: 100%; }
+        max-width: 100%;
+        max-height: 110px; }
 
 @media all and (max-width: 1230px) {
   .big_slider {

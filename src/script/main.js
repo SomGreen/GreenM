@@ -273,7 +273,7 @@ $(document).ready(function(){
   });
   
   
-  $('body').on('click', '.formSubmit button', function(e) {
+  $('body').on('click', '.checkForm button', function(e) {
     console.log('submit');
     
     e.preventDefault();
@@ -288,7 +288,9 @@ $(document).ready(function(){
     var invalid = $.inArray(false, validIdentArray);
     
     if(invalid == -1){
-      $('.registration_form form').submit();
+      // $('.registration_form form').submit();
+      var step = $(this).parents('.container').next();
+      showStep(step);
     }
   });
   
