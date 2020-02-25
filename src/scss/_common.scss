@@ -8,7 +8,7 @@
   display: none;
   position: relative;
   z-index: 10;
-
+  
   background: $white;
   border: 1px solid #ced1d5;
   padding: 10px 0px;
@@ -150,8 +150,74 @@
 }
 
 
+.jumbo.jumbo_other{
+  background: url('../img/jumbo_other_bg.png') 50% 50% no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 181px;
+  padding-bottom: 0;
+  &:before{
+    content: '';
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    top: 0; 
+    right: 0;
+    background: url('../img/green_transparent.png') 0% 50% no-repeat;
+    z-index: 10;
+  }
+  .jumbo_timer{
+    bottom: 50px;
+    &_h{
+      display: none;
+    }
+  }
+  .jumbo_reg_link{
+    position: absolute;
+    top: 50%;
+    @include translate(0, -50%);
+    z-index: 15;
+    width: 100%;
+    height: 55px;
+    .container{
+      position: relative;
+    }
+    a{
+      position: absolute;
+      right: 15px;
+      display: block;
+      width: 263px;
+      height: 55px;
+      border-radius: 4px;
+      border: 1px solid $borderGreen;
+      background-color: $borderGreen; 
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 400;
+      padding-top: 10px;
+      text-align: center;
+    }
+  }
+}
 
-
+.green_dot_list{
+  li{
+    padding-left: 20px;
+    position: relative;
+    
+    &:before{
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 10px;
+      background: $borderGreen;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 7px;
+    }
+  } 
+}
 
 
 
