@@ -26,6 +26,7 @@
 		var minutes = Math.floor((t / 1000 / 60) % 60);
 		var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
 		var days = Math.floor(t / (1000 * 60 * 60 * 24));
+		// console.log(days, hours, minutes, seconds);
 		return {
 			'total': t,
 			'days': days,
@@ -45,11 +46,25 @@
 
 		function updateClock() {
 			var t = getTimeRemaining(deadline);
-			
-			days.html(('0' + t.days).slice(-2));
-			hours.html(('0' + t.hours).slice(-2));
-			minutes.html(('0' + t.minutes).slice(-2));
-			seconds.html(('0' + t.seconds).slice(-2));
+			var slice = []
+			$.each(t, function(i,e){
+				// console.log(i,e);
+				if(e>999){
+					slice.push(4)
+				}
+				else if(e>99){
+					slice.push(3)
+				}
+				else{
+					slice.push(2)
+				}
+			});
+			// console.log(slice);
+
+			days.html(('0' + t.days).slice(-slice[1]));
+			hours.html(('0' + t.hours).slice(-slice[2]));
+			minutes.html(('0' + t.minutes).slice(-slice[3]));
+			seconds.html(('0' + t.seconds).slice(-slice[4]));
 			
 			var captionSpan = [];
 

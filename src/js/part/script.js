@@ -61,7 +61,7 @@ $(document).ready(function(){
   if($('div').is('.jumbo_timer_clock')){
     $('.jumbo_timer_clock').lightTimer({
       language: 'ru',
-      deadline: '31 Jul 2020 23:59:00 GMT+0300'
+      deadline: '20 Jun 2020 09:00:00 GMT+0300'
     });
   }
   
@@ -142,9 +142,9 @@ $(document).ready(function(){
   });
   
   $('body').on('change', '.registration_form select', function() {
-    console.log('change select');
+    //  console.log('change select');
     $(this).parents('.requiredField').removeClass('error_field');
-    console.log($(this).val());
+    //  console.log($(this).val());
     var val = parseInt($(this).val());
     if(val == -1){
       $(this).parents('.requiredField').addClass('error_field');
@@ -181,7 +181,7 @@ $(document).ready(function(){
     var code = $(this).val();
     var number = $(this).parents('.phoneBlock').find('.telInput input').val();
     
-    console.log(number);
+    //  console.log(number);
     if(!number){
       number = 0;
     }
@@ -190,7 +190,7 @@ $(document).ready(function(){
   
   
   $('body').on('click', '.checkForm button', function(e) {
-    console.log('submit');
+    //  console.log('submit');
     
     e.preventDefault();
     var tempValidIdent;
@@ -250,7 +250,7 @@ $(document).ready(function(){
     });
   }
   function funcActionSelectType() {
-    console.log('funcActionSelectType');
+    //  console.log('funcActionSelectType');
     let id = $(this).val();
     // setDistances();
     // funcSetDefaulType();

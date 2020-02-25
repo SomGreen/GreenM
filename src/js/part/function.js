@@ -2,8 +2,8 @@ function validateField(inputFieldContainer) {
 
   // var inputFieldContainer = $(inputField).parents('.requiredField');
   var inputField = $(inputFieldContainer).find('select, input');
-  console.log('inputField');
-  console.log(inputField);
+  //  console.log('inputField');
+  //  console.log(inputField);
 	var email;
 	var valid = true;
 
@@ -31,7 +31,7 @@ function validateField(inputFieldContainer) {
 	if(inputField.is('.phoneInput') == true){
 		var pattern = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){12,15}(\s*)?$/;
     phone = $(inputField).val();
-    console.log(phone);
+    //  console.log(phone);
 		if(!pattern.test(phone)){
 			inputFieldContainer.parents('.phoneBlock').addClass('error_field');
 			valid = false;
@@ -39,7 +39,7 @@ function validateField(inputFieldContainer) {
   }
 
 	if(inputField.is('.checkboxField') == true){
-    console.log('checked',$(inputField).prop('checked'));
+    //  console.log('checked',$(inputField).prop('checked'));
     if(!$(inputField).prop('checked')){
       $(inputField).siblings('label').addClass('error');
 			valid = false;
@@ -49,7 +49,7 @@ function validateField(inputFieldContainer) {
 
   if(inputField.is('select')){
     var selectVal = parseInt(inputField.val());
-    console.log(selectVal);
+    //  console.log(selectVal);
     if(selectVal == -1){
       inputFieldContainer.addClass('error_field');
 			valid = false;
@@ -57,7 +57,9 @@ function validateField(inputFieldContainer) {
   }
 
 	if($.trim($(inputField).val()).length == 0){
-		$(inputFieldContainer).addClass('error_field');
+    $(inputFieldContainer).addClass('error_field');
+			valid = false;
+  
 	}
 
 	return valid;
