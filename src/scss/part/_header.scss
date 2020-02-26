@@ -8,6 +8,7 @@
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.11);
     padding: 16px 0;
     .container{
+      position: relative;
       text-align: justify;
       font-size: 0;
       &:after{
@@ -19,8 +20,21 @@
     &_left{
       display: inline-block;
       vertical-align: middle;
+      width: 100%;
+      padding-right: 310px;
+      text-align: justify;
+      font-size: 0;
+      &:after{
+        content: '';
+        width: 100%;
+        display: inline-block;
+      } 
     }
     &_right{
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      @include translate(0, -50%);
       display: inline-block;
       vertical-align: middle;
     }
@@ -32,7 +46,10 @@
       margin-right: 48px;
     }
     &.header_partner{
-      margin-right: 44px;
+      margin-right: 58px;
+    }
+    &.header_event{
+      margin-right: -90px;
     }
   }
   &_soc{
@@ -291,6 +308,7 @@
         width: 100%;
         text-align: justify;
         font-size: 0;
+        padding-right: 0;
         &:after{
           content: '';
           display: inline-block;

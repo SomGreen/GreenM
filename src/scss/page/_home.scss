@@ -7,17 +7,19 @@
   background-size: cover;
   position: relative;
   padding-bottom: 205px;
+  overflow: hidden;
   .running_container{
     height: 100%;
     position: absolute;
     top: 0;
     left: 50%;
     @include translate(-50%, 0%);
+    pointer-events: none;
   }
   .running_img{
     position: absolute;
     bottom: 0;
-    right: 200px;
+    right: 250px;
   }
   .container{
     // height: 100%;
@@ -62,32 +64,32 @@
   }
   &_timer{
     position: absolute;
-    bottom: 74px;
+    bottom: 226px;
     // bottom: 0;
     width: 100%;
+    z-index: 10;
     .container{
       position: relative;
       
     }
     &_h{
       margin-bottom: 19px;
-      img{
-        
-      }
+      text-align: right;
       span{
-        font-size: 18px;
-        font-weight: 400;
-        color: $fontBlack;
+        color: #ffffff;
+        font-size: 48px;
+        font-weight: 700;
       }
     }
     &_clock{
+      text-align: right;
       .lightTimerBlock{
         display: inline-block;
         border-radius: 5px;
         background-color: #ffffff;
         padding: 5px 10px 7px;
         text-align: center;
-        margin-right: 19px;
+        margin-left: 19px;
         width: 125px;
         color: $fontBlack;
         
@@ -153,9 +155,11 @@
     .lightTimerBlock{
       padding-left: 21px;
       padding-right: 21px;
-      width: 90px;
+      width: 75px;
+      padding: 5px;
+      text-align: center;
       &:first-child{
-        width: 120px;
+        width: 93px;
       }
       &:last-child{
         .lightTimerСaptionSpan{
@@ -181,32 +185,37 @@
     padding-bottom: 85px;
     .running_img{
       height: 330px;
-      bottom: 85px;
-      right: 10px;
+      // bottom: 85px;
+      // right: 10px;
+
+      right: 50%;
+      bottom: 50%;
+      @include translate(50%, 42%);
       img{
         height: 100%;
       }
     }
   }
   .jumbo_timer{
-    background: $fontBlack;
+    // background: $fontBlack;
   }
   .jumbo_timer{
-    bottom: 0;
+    bottom: 21px;
     
     &_h{
       display: none;
     }
     &_clock{
-      height: 85px;
+      // height: 85px;
       padding-top: 15px;
       text-align: center;
       .lightTimerBlock{
         width: 75px;
         padding-left: 5px;
         padding-right: 5px;
-        margin-right: 13px;
+        margin-left: 13px;
         &:first-child{
+          margin-left: 0;
           width: 93px;
         }
       }
@@ -476,7 +485,7 @@
     padding-right: 15px;
   }
 }
-  @media all and (max-width: 991px){
+@media all and (max-width: 991px){
   .partners_slider_item{
     height: 100%;
     &_wrapper{

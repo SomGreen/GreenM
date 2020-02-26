@@ -156,20 +156,23 @@
   position: relative;
   min-height: 181px;
   padding-bottom: 0;
-  &:before{
-    content: '';
-    width: 45%;
-    height: 100%;
-    position: absolute;
-    top: 0; 
-    right: 0;
-    background: url('../img/green_transparent.png') 0% 50% no-repeat;
-    z-index: 10;
-  }
+  // &:before{
+  //   content: '';
+  //   width: 45%;
+  //   height: 100%;
+  //   position: absolute;
+  //   top: 0; 
+  //   right: 0;
+  //   background: url('../img/green_transparent.png') 0% 50% no-repeat;
+  //   z-index: 10;
+  // }
   .jumbo_timer{
     bottom: 50px;
     &_h{
       display: none;
+    }
+    &_clock{
+      text-align: left;
     }
   }
   .jumbo_reg_link{
@@ -189,8 +192,8 @@
       width: 263px;
       height: 55px;
       border-radius: 4px;
-      border: 1px solid $borderGreen;
-      background-color: $borderGreen; 
+      border: 1px solid $green;
+      background-color: $green; 
       color: #ffffff;
       font-size: 24px;
       font-weight: 400;

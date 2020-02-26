@@ -95,6 +95,8 @@ $(document).ready(function(){
       });
       
     }
+
+$('.dropdown_list_item [data-value="-1"]').click();
     
     /* select transform END */
     
