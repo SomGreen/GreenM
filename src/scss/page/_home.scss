@@ -201,12 +201,16 @@
   }
   .jumbo_timer{
     bottom: 21px;
-    
+    .container{
+      padding: 0;
+    }
     &_h{
       display: none;
     }
     &_clock{
       // height: 85px;
+      // min-width: $minwidth;
+
       padding-top: 15px;
       text-align: center;
       .lightTimerBlock{

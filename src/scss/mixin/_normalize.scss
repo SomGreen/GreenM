@@ -27,6 +27,11 @@ main{
   // height: 100%;
   padding-top: 162px;
 }
+@media all and (max-width: 550px){
+  main{
+    padding-top: 131px;
+  }
+}
 
 .container{
   width: 100%;
@@ -35,6 +40,8 @@ main{
   padding-right: $content_padd_right;
   margin-left: auto;
   margin-right: auto;
+  min-width: $minwidth;
+  
 }
 
 :focus, :active {
