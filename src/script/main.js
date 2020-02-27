@@ -181,32 +181,35 @@ $(document).ready(function(){
       });
       
     }
-
-$('.dropdown_list_item [data-value="-1"]').click();
+    
     
     /* select transform END */
     
     
     /* dropdown */
     
-    $('body').on('click', '.dropdown_caption', function() {
+    
+    $('body').on('click', '.dropdown_caption', function () {
       // $(this).siblings('.dropdown_list').slideToggle('fast');
       // $(this).toggleClass('active');
+      var valid = true;
+      if ($(this).parents(".selectField").is(".distanceField")) {
+        valid = checkRequiredFieldsForDistance($(this).parents(".selectField"));
+      }
       
-      if($(this).is('.active')){
+      if ($(this).is('.active')) {
         $(this).siblings('.dropdown_list').slideUp('fast');
         $(this).removeClass('active');
         
+      } else {
+        if (valid) {
+          $('.dropdown_list').slideUp('fast');
+          $('.dropdown_caption').removeClass('active');
+          
+          $(this).siblings('.dropdown_list').slideDown('fast');
+          $(this).addClass('active');
+        }
       }
-      else{
-        $('.dropdown_list').slideUp('fast');
-        $('.dropdown_caption').removeClass('active');
-        
-        $(this).siblings('.dropdown_list').slideDown('fast');
-        $(this).addClass('active');
-        
-      }
-      
     });
     $('body').on('click', '.dropdown_list_item', function() {
       $(this).parents('.dropdown_list').slideUp('fast');

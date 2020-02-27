@@ -309,7 +309,8 @@ img {
   position: absolute;
   width: 100%;
   background: #fff;
-  z-index: 15; }
+  z-index: 15;
+  min-width: 375px; }
   .header_top {
     border-bottom: 1px solid #ced1d5;
     -webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.11);
@@ -1511,6 +1512,7 @@ img {
       transform: translate(-50%, -50%); }
       .partners_slider_img img {
         max-width: 100%;
+        min-width: 100px;
         max-height: 110px; }
 
 @media all and (max-width: 1230px) {
@@ -1529,14 +1531,20 @@ img {
     width: 77%; } }
 
 .moscow_page .breedcrumbs {
-  padding-top: 44px;
-  padding-bottom: 44px; }
-  .moscow_page .breedcrumbs_container {
-    background-color: #f8f8f8; }
+  padding-top: 44px; }
+
+.moscow_headline {
+  padding-top: 25px;
+  padding-bottom: 24px; }
+  .moscow_headline_text {
+    color: #08a652;
+    font-size: 40px;
+    font-weight: 700; }
 
 .moscow_location {
   background-color: #f8f8f8;
-  padding-bottom: 58px; }
+  padding-bottom: 58px;
+  padding-top: 24px; }
   .moscow_location .container {
     font-size: 0;
     text-align: justify; }
@@ -1566,13 +1574,12 @@ img {
       color: #999999;
       font-size: 18px;
       font-weight: 400;
-      max-width: 355px;
+      max-width: 380px;
       border-top: 1px solid #999;
       border-bottom: 1px solid #999;
       padding-top: 13px;
       padding-bottom: 11px; }
       .moscow_location_info_announcement span {
-        max-width: 186px;
         display: block; }
   .moscow_location_map {
     max-width: 556px;
@@ -1725,8 +1732,6 @@ img {
 .moscow_winner {
   padding-top: 60px;
   padding-bottom: 35px; }
-  .moscow_winner .container {
-    font-size: 0; }
   .moscow_winner_img {
     width: 43%;
     display: inline-block;
@@ -1735,20 +1740,81 @@ img {
       max-width: 100%;
       max-height: 100%; }
   .moscow_winner_text {
-    width: 57%;
-    display: inline-block;
     vertical-align: middle;
-    padding-left: 29px;
+    padding-top: 36px;
     font-size: 16px; }
+    .moscow_winner_text p {
+      margin-bottom: 18px; }
+      .moscow_winner_text p:last-child {
+        margin-bottom: 0; }
   .moscow_winner_h {
     margin-bottom: 26px;
     color: #262626;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 32px; }
+    font-size: 24px;
+    font-weight: 700; }
   .moscow_winner_list li {
     margin-bottom: 12px; }
     .moscow_winner_list li:last-child {
       margin-bottom: 0; }
+  .moscow_winner_table .green {
+    color: #08a652;
+    font-size: 18px;
+    font-weight: 700; }
+  .moscow_winner_table table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1067px; }
+    .moscow_winner_table table td {
+      border: 1px solid #ced1d5;
+      padding-top: 23px;
+      padding-bottom: 21px;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-align: center;
+      vertical-align: middle; }
+  .moscow_winner_table thead tr:first-child {
+    font-weight: 700; }
+    .moscow_winner_table thead tr:first-child td {
+      width: 16.66%; }
+      .moscow_winner_table thead tr:first-child td:first-child {
+        padding-left: 15px;
+        padding-right: 15px; }
+  .moscow_winner_table_mob thead tr:first-child {
+    font-weight: 400; }
+
+.moscow_gallery_item {
+  overflow: hidden;
+  position: relative; }
+  .moscow_gallery_item_wrapper {
+    padding: 15px; }
+  .moscow_gallery_item img {
+    min-width: 100%;
+    height: 100%;
+    position: absolute; }
+
+.moscow_gallery_grid {
+  font-size: 0;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .moscow_gallery_grid_col {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top; }
+  .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(1) .moscow_gallery_item {
+    padding-bottom: 56.45%; }
+  .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(2), .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(3) {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top; }
+    .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(2) .moscow_gallery_item, .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(3) .moscow_gallery_item {
+      padding-bottom: 119%; }
+  .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(3) .moscow_gallery_item {
+    padding-bottom: 56.45%; }
+  .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(2), .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(1) {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top; }
+    .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(2) .moscow_gallery_item, .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(1) .moscow_gallery_item {
+      padding-bottom: 119%; }
 
 /*# sourceMappingURL=style.css.map */

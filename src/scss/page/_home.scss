@@ -478,6 +478,7 @@
       @include translate(-50%, -50%);
       img{
         max-width: 100%;
+        min-width: 100px;
         max-height: 110px;
       }
     }
