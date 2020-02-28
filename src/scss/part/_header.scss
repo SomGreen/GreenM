@@ -22,7 +22,7 @@
       display: inline-block;
       vertical-align: middle;
       width: 100%;
-      padding-right: 310px;
+      // padding-right: 310px;
       text-align: justify;
       font-size: 0;
       &:after{
@@ -38,6 +38,8 @@
       @include translate(0, -50%);
       display: inline-block;
       vertical-align: middle;
+      
+      display: none;
     }
   }
   &_logo{
@@ -50,7 +52,7 @@
       margin-right: 58px;
     }
     &.header_event{
-      margin-right: -90px;
+      // margin-right: -90px;
     }
   }
   &_soc{
@@ -280,6 +282,7 @@
   @media all and(max-width: 930px){
     .header{
       .helpers_block{
+        display: none;
         &_item{
           display: inline-block;
           width: 30px;
@@ -413,6 +416,11 @@
     .header_logo{
       img{
         max-height: 37px;
+      }
+      &.header_company{
+        img{
+          max-height: 25px;
+        }
       }
     } 
   }

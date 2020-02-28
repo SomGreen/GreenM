@@ -78,7 +78,11 @@
       span{
         color: #ffffff;
         font-size: 48px;
-        font-weight: 700;
+        font-weight: 700; 
+        display: block;
+        &:nth-child(1){
+          font-size: 75px;
+        }
       }
     }
     &_clock{
@@ -246,7 +250,8 @@
 
 
 .about_project{
-  background-color: rgba(8, 166, 82, 0.45);
+  // background-color: rgba(8, 166, 82, 0.45);
+  background: #ffffff;
   padding: 61px 0 80px;
   .container{
     
@@ -318,7 +323,7 @@
 
 @media all and (max-width: 991px){
   .about_project{
-    background-color: rgba(8, 166, 82, 0.45);
+    // background-color: rgba(8, 166, 82, 0.45);
     padding: 43px 0 30px;
     .container{
       

@@ -328,7 +328,6 @@ img {
       display: inline-block;
       vertical-align: middle;
       width: 100%;
-      padding-right: 310px;
       text-align: justify;
       font-size: 0; }
       .header_top_left:after {
@@ -342,7 +341,8 @@ img {
       -webkit-transform: translate(0, -50%);
       transform: translate(0, -50%);
       display: inline-block;
-      vertical-align: middle; }
+      vertical-align: middle;
+      display: none; }
   .header_logo {
     display: inline-block;
     vertical-align: middle; }
@@ -350,8 +350,6 @@ img {
       margin-right: 48px; }
     .header_logo.header_partner {
       margin-right: 58px; }
-    .header_logo.header_event {
-      margin-right: -90px; }
   .header_soc {
     display: inline-block;
     vertical-align: middle; }
@@ -531,26 +529,28 @@ img {
   display: none; }
 
 @media all and (max-width: 930px) {
-  .header .helpers_block_item {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
-    background-color: #08a652;
-    color: #ffffff;
-    font-family: "Font Awesome 5 Free";
-    font-size: 11px;
-    font-weight: 900;
-    position: relative;
-    float: right;
-    margin-left: 7px;
-    margin-top: -28px; }
-    .header .helpers_block_item i {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
+  .header .helpers_block {
+    display: none; }
+    .header .helpers_block_item {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      background-color: #08a652;
+      color: #ffffff;
+      font-family: "Font Awesome 5 Free";
+      font-size: 11px;
+      font-weight: 900;
+      position: relative;
+      float: right;
+      margin-left: 7px;
+      margin-top: -28px; }
+      .header .helpers_block_item i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
   .header_top_right {
     display: none; }
   .header_top_left {
@@ -625,7 +625,9 @@ img {
 
 @media all and (max-width: 550px) {
   .header_logo img {
-    max-height: 37px; } }
+    max-height: 37px; }
+  .header_logo.header_company img {
+    max-height: 25px; } }
 
 .footer {
   background-color: #262626; }
@@ -1255,7 +1257,10 @@ img {
       .jumbo_timer_h span {
         color: #ffffff;
         font-size: 48px;
-        font-weight: 700; }
+        font-weight: 700;
+        display: block; }
+        .jumbo_timer_h span:nth-child(1) {
+          font-size: 75px; }
     .jumbo_timer_clock {
       text-align: right; }
       .jumbo_timer_clock .lightTimerBlock {
@@ -1358,7 +1363,7 @@ img {
     font-size: 14px; } }
 
 .about_project {
-  background-color: rgba(8, 166, 82, 0.45);
+  background: #ffffff;
   padding: 61px 0 80px; }
   .about_project .site_h {
     margin-bottom: -35px; }
@@ -1404,7 +1409,6 @@ img {
 
 @media all and (max-width: 991px) {
   .about_project {
-    background-color: rgba(8, 166, 82, 0.45);
     padding: 43px 0 30px; }
     .about_project .site_h {
       margin-bottom: 32px; }
@@ -1553,6 +1557,7 @@ img {
       width: 100%;
       display: inline-block; }
   .moscow_location_info {
+    text-align: left;
     display: inline-block;
     width: 50%;
     vertical-align: top; }
@@ -1590,6 +1595,8 @@ img {
 .moscow_payment {
   padding-top: 34px;
   padding-bottom: 41px; }
+  .moscow_payment .container {
+    font-size: 0; }
   .moscow_payment .site_h {
     margin-bottom: 22px; }
   .moscow_payment_description {
@@ -1597,7 +1604,7 @@ img {
     color: #262626;
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 15px; }
+    margin-bottom: 30px; }
     .moscow_payment_description a {
       color: #08a652;
       font-weight: 600;
@@ -1613,24 +1620,30 @@ img {
     margin-bottom: 18px;
     font-size: 0;
     border: 1px solid #ced1d5; }
-    .moscow_payment_table.mob_table .moscow_payment_table_h.green {
-      background-color: #08a652; }
-      .moscow_payment_table.mob_table .moscow_payment_table_h.green .moscow_payment_table_cell {
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: 400; }
-    .moscow_payment_table.mob_table .moscow_payment_table_h .moscow_payment_table_cell {
-      text-align: center;
-      width: 100%; }
-    .moscow_payment_table.mob_table .moscow_payment_table_row .moscow_payment_table_cell {
-      width: 50%;
-      text-align: center; }
-      .moscow_payment_table.mob_table .moscow_payment_table_row .moscow_payment_table_cell:first-child {
-        padding-top: 10px; }
-        .moscow_payment_table.mob_table .moscow_payment_table_row .moscow_payment_table_cell:first-child .distance {
-          color: #08a652;
-          font-size: 18px;
-          font-weight: 700; }
+    .moscow_payment_table.mob_table {
+      display: none;
+      width: 48%;
+      vertical-align: top; }
+      .moscow_payment_table.mob_table + .mob_table {
+        margin-left: 4%; }
+      .moscow_payment_table.mob_table .moscow_payment_table_h.green {
+        background-color: #08a652; }
+        .moscow_payment_table.mob_table .moscow_payment_table_h.green .moscow_payment_table_cell {
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: 400; }
+      .moscow_payment_table.mob_table .moscow_payment_table_h .moscow_payment_table_cell {
+        text-align: center;
+        width: 100%; }
+      .moscow_payment_table.mob_table .moscow_payment_table_row .moscow_payment_table_cell {
+        width: 50%;
+        text-align: center; }
+        .moscow_payment_table.mob_table .moscow_payment_table_row .moscow_payment_table_cell:first-child {
+          padding-top: 10px; }
+          .moscow_payment_table.mob_table .moscow_payment_table_row .moscow_payment_table_cell:first-child .distance {
+            color: #08a652;
+            font-size: 18px;
+            font-weight: 700; }
     .moscow_payment_table_h .moscow_payment_table_cell {
       padding-top: 10px; }
       .moscow_payment_table_h .moscow_payment_table_cell > div {
@@ -1662,6 +1675,11 @@ img {
         border-left: none; }
       .moscow_payment_table_cell:last-child {
         width: 15.285%; }
+    .moscow_payment_table_caption {
+      color: #262626;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 22px; }
   .moscow_payment.moscov_participants {
     background-color: #f8f8f8;
     padding-top: 28px;
@@ -1674,6 +1692,14 @@ img {
         width: 20%;
         padding-top: 10px;
         text-align: center; }
+  .moscow_payment_list {
+    margin-top: 26px;
+    font-size: 16px; }
+    .moscow_payment_list_h {
+      font-weight: 700;
+      margin-bottom: 18px; }
+    .moscow_payment_list .green_dot_list li {
+      margin-bottom: 3px; }
 
 .moscow_schedule {
   padding-top: 29px;
@@ -1732,16 +1758,24 @@ img {
 .moscow_winner {
   padding-top: 60px;
   padding-bottom: 35px; }
+  .moscow_winner .container .site_h {
+    margin-bottom: 34px; }
   .moscow_winner_img {
-    width: 43%;
-    display: inline-block;
-    vertical-align: middle; }
+    display: none;
+    text-align: center;
+    margin-bottom: 22px; }
     .moscow_winner_img img {
       max-width: 100%;
       max-height: 100%; }
+  .moscow_winner_caption {
+    display: none;
+    margin-bottom: 43px; }
+    .moscow_winner_caption b,
+    .moscow_winner_caption span {
+      display: block; }
   .moscow_winner_text {
     vertical-align: middle;
-    padding-top: 36px;
+    margin-top: 36px;
     font-size: 16px; }
     .moscow_winner_text p {
       margin-bottom: 18px; }
@@ -1756,65 +1790,168 @@ img {
     margin-bottom: 12px; }
     .moscow_winner_list li:last-child {
       margin-bottom: 0; }
-  .moscow_winner_table .green {
+  .moscow_winner_table {
+    margin-bottom: 34px; }
+    .moscow_winner_table_h {
+      color: #262626;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 14px; }
+    .moscow_winner_table_mob {
+      margin-bottom: 20px;
+      display: none; }
+    .moscow_winner_table .green {
+      color: #08a652;
+      font-size: 18px;
+      font-weight: 700; }
+    .moscow_winner_table table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 1067px; }
+      .moscow_winner_table table td {
+        border: 1px solid #ced1d5;
+        padding-top: 23px;
+        padding-bottom: 21px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        vertical-align: middle; }
+    .moscow_winner_table thead tr:first-child {
+      font-weight: 700; }
+      .moscow_winner_table thead tr:first-child td {
+        width: 16.66%; }
+        .moscow_winner_table thead tr:first-child td:first-child {
+          padding-left: 15px;
+          padding-right: 15px; }
+    .moscow_winner_table_mob thead tr:first-child {
+      font-weight: 400; }
+
+.questionnaire_block {
+  border-bottom: 1px solid #ced1d5;
+  padding-bottom: 27px;
+  margin-bottom: 26px; }
+  .questionnaire_block > .moscow_start_package_h:first-child {
+    margin-bottom: 18px; }
+
+.receipt_block .moscow_start_package_link a {
+  background-color: #f8f8f8;
+  border: 1px solid #ced1d5;
+  color: #262626;
+  font-size: 16px;
+  font-weight: 400; }
+  .receipt_block .moscow_start_package_link a .fas {
     color: #08a652;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    line-height: 20px; }
+
+.moscow_start_package {
+  padding-bottom: 13px; }
+  .moscow_start_package .site_h {
+    margin-bottom: 25px; }
+  .moscow_start_package_h {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px; }
+  .moscow_start_package_list {
+    margin-bottom: 20px; }
+  .moscow_start_package_link a {
+    padding: 12px 49px;
+    display: inline-block;
+    background-color: #08a652;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px; }
+  .moscow_start_package_link .download_file_name {
+    color: #262626;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-left: 19px; }
+  .moscow_start_package_caption {
+    line-height: 22px;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 20px; }
+    .moscow_start_package_caption b {
+      color: #08a652;
+      font-weight: 700; }
+  .moscow_start_package_announcement {
+    color: #999999;
     font-size: 18px;
-    font-weight: 700; }
-  .moscow_winner_table table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 1067px; }
-    .moscow_winner_table table td {
+    font-weight: 400;
+    max-width: 430px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding-top: 13px;
+    padding-bottom: 11px;
+    margin-top: 28px; }
+
+.moscow_gallery {
+  padding-top: 13px; }
+  .moscow_gallery_item {
+    overflow: hidden;
+    position: relative; }
+    .moscow_gallery_item_wrapper {
+      padding: 15px; }
+    .moscow_gallery_item img {
+      min-width: 100%;
+      height: 100%;
+      position: absolute; }
+  .moscow_gallery_grid {
+    font-size: 0;
+    margin-left: -15px;
+    margin-right: -15px; }
+    .moscow_gallery_grid_col {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top; }
+    .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(1) .moscow_gallery_item {
+      padding-bottom: 56.45%; }
+    .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(2), .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(3) {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top; }
+      .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(2) .moscow_gallery_item, .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(3) .moscow_gallery_item {
+        padding-bottom: 119%; }
+    .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(3) .moscow_gallery_item {
+      padding-bottom: 56.45%; }
+    .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(2), .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(1) {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top; }
+      .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(2) .moscow_gallery_item, .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(1) .moscow_gallery_item {
+        padding-bottom: 119%; }
+  .moscow_gallery_loadMore {
+    text-align: center;
+    padding: 27px 0 46px; }
+    .moscow_gallery_loadMore a {
       border: 1px solid #ced1d5;
-      padding-top: 23px;
-      padding-bottom: 21px;
-      padding-left: 5px;
-      padding-right: 5px;
-      text-align: center;
-      vertical-align: middle; }
-  .moscow_winner_table thead tr:first-child {
-    font-weight: 700; }
-    .moscow_winner_table thead tr:first-child td {
-      width: 16.66%; }
-      .moscow_winner_table thead tr:first-child td:first-child {
-        padding-left: 15px;
-        padding-right: 15px; }
-  .moscow_winner_table_mob thead tr:first-child {
-    font-weight: 400; }
+      background-color: #ffffff;
+      padding: 15px 59px 13px;
+      color: #262626;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 20px;
+      position: relative;
+      display: inline-block; }
+      .moscow_gallery_loadMore a:after {
+        content: '\f0dd';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        color: #08a652;
+        font-size: 18px;
+        position: relative;
+        top: -3px;
+        right: -4px; }
 
-.moscow_gallery_item {
-  overflow: hidden;
-  position: relative; }
-  .moscow_gallery_item_wrapper {
-    padding: 15px; }
-  .moscow_gallery_item img {
-    min-width: 100%;
-    height: 100%;
-    position: absolute; }
-
-.moscow_gallery_grid {
-  font-size: 0;
-  margin-left: -15px;
-  margin-right: -15px; }
-  .moscow_gallery_grid_col {
-    width: 50%;
-    display: inline-block;
-    vertical-align: top; }
-  .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(1) .moscow_gallery_item {
-    padding-bottom: 56.45%; }
-  .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(2), .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(3) {
-    width: 50%;
-    display: inline-block;
-    vertical-align: top; }
-    .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(2) .moscow_gallery_item, .moscow_gallery_grid_left .moscow_gallery_item_wrapper:nth-child(3) .moscow_gallery_item {
-      padding-bottom: 119%; }
-  .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(3) .moscow_gallery_item {
-    padding-bottom: 56.45%; }
-  .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(2), .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(1) {
-    width: 50%;
-    display: inline-block;
-    vertical-align: top; }
-    .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(2) .moscow_gallery_item, .moscow_gallery_grid_right .moscow_gallery_item_wrapper:nth-child(1) .moscow_gallery_item {
-      padding-bottom: 119%; }
+@media all and (max-width: 1155px) {
+  .moscow_payment_description {
+    margin-bottom: 0; }
+  .moscow_payment_table.desktop_table {
+    display: none; }
+  .moscow_payment_table.mob_table {
+    display: inline-block; } }
 
 /*# sourceMappingURL=style.css.map */
