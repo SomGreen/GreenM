@@ -539,6 +539,9 @@
   &_item{
     overflow: hidden;
     position: relative;
+    &.squardPhto{
+      padding-bottom: 119%;
+    }
     &_wrapper{
       padding: 15px;
     }
