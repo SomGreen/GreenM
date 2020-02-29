@@ -738,6 +738,12 @@
       }
     }
   }
+  .moscow_payment_table.mob_table{
+    width: 100%;
+    & + .mob_table{
+      margin-left: 0;
+    }
+  }
   
   .moscow_winner{
     &_list{

@@ -2026,6 +2026,10 @@ img {
     border-left: 1px solid #ced1d5; }
     .moscow_payment.moscov_participants .moscow_payment_table_cell:last-child {
       border-bottom: none; }
+  .moscow_payment_table.mob_table {
+    width: 100%; }
+    .moscow_payment_table.mob_table + .mob_table {
+      margin-left: 0; }
   .moscow_winner_list span {
     display: block;
     margin-bottom: 18px; }

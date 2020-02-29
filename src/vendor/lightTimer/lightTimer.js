@@ -91,22 +91,24 @@
 				var strSpan = String($(e).siblings('span').html());
 				var lastStrSpan =  Number(strSpan[strSpan.length-1]); 
 
-				if(lastStrSpan == 0)
-				{
-					$(e).html(captionSpan[i][0]);
-				}
-				else if(lastStrSpan == 1)
-				{
-					$(e).html(captionSpan[i][1]);
-				}
-				else if(lastStrSpan > 1 && lastStrSpan <= 4)
-				{
-					$(e).html(captionSpan[i][2]);
-				}
-				else if(lastStrSpan >= 5 && lastStrSpan <= 9 )
-				{
-					$(e).html(captionSpan[i][0]);
-				}
+				$(e).html(captionSpan[i][0]);
+
+				// if(lastStrSpan == 0)
+				// {
+				// 	$(e).html(captionSpan[i][0]);
+				// }
+				// else if(lastStrSpan == 1)
+				// {
+				// 	$(e).html(captionSpan[i][1]);
+				// }
+				// else if(lastStrSpan > 1 && lastStrSpan <= 4)
+				// {
+				// 	$(e).html(captionSpan[i][2]);
+				// }
+				// else if(lastStrSpan >= 5 && lastStrSpan <= 9 )
+				// {
+				// 	$(e).html(captionSpan[i][0]);
+				// }
 			});
 
 			if (t.total <= 0) {

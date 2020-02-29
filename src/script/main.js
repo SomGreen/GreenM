@@ -418,9 +418,42 @@ $(document).ready(function(){
     slideDetect();
     
     $(window).resize(function() {
-      slideDetect()
+      slideDetect();
     });
     
+    /* moscow gallery */
+
+    $('body').on('click', '.moscow_gallery_loadMore a', function() {
+      $('.moscow_gallery_grid_col').slideDown();
+    });
+    $('body').on('click', '.moscow_gallery_item',  function() {
+      var src = $(this).find('img').attr('src');
+      $('body').append('<div class="moscowModalImg"><img src="'+src+'"></div>')
+      $('.moscowModalImg').css({
+        'position': 'fixed',
+        'top': '50%',
+        'left': '50%',
+        'width': '100%',
+        'height': '100%',
+        'transform': 'translate(-50%, -50%)',
+        'background': 'rgba(0, 0, 0, 0.6)'
+      });
+      $('.moscowModalImg img').css({
+        'position': 'absolute',
+        'top': '50%',
+        'left': '50%',
+        'width': '80%',
+        'transform': 'translate(-50%, -50%)'
+      })
+    });
+    $('body').on('click', '.moscowModalImg', function() {
+      $('.moscowModalImg').remove();
+    });
+    $(window).on('scroll', function() {
+      $('.moscowModalImg').remove();
+    });
+
+    /* moscow gallery END */
     
     
     
