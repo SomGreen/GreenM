@@ -117,6 +117,11 @@ $(document).ready(function(){
       $('.header_bottom').slideToggle();
       
     });
+    $(window).on('resize', function() {
+      if($(window).outerWidth() > 930 ){
+        $('.header_bottom').removeAttr('style');
+      } 
+    })
     
     
     

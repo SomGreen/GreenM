@@ -245,7 +245,8 @@ img {
   background-size: cover;
   position: relative;
   min-height: 181px;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  z-index: 1; }
   .jumbo.jumbo_other .jumbo_timer {
     bottom: 50px; }
     .jumbo.jumbo_other .jumbo_timer_h {
@@ -587,6 +588,10 @@ img {
     display: block;
     padding: 10px 0;
     position: relative; }
+    .header_nav_item:first-child {
+      padding-left: 0; }
+      .header_nav_item:first-child:before {
+        display: none; }
     .header_nav_item:after {
       content: '\f105';
       font-family: 'Font Awesome 5 Free';
@@ -613,7 +618,9 @@ img {
     .registration_mob_link a {
       display: block;
       border-top: 1px solid #ced1d5;
-      padding: 25px 15px; }
+      padding: 25px 15px;
+      text-transform: uppercase;
+      font-weight: 600; }
       .registration_mob_link a:after {
         content: '\f105';
         font-family: 'Font Awesome 5 Free';
@@ -1534,7 +1541,8 @@ img {
   .partners_slider_img {
     width: 77%; } }
 
-.moscow_page .breedcrumbs {
+.moscow_page moscow_payment
+.breedcrumbs {
   padding-top: 44px; }
 
 .moscow_headline {
@@ -1560,7 +1568,8 @@ img {
     text-align: left;
     display: inline-block;
     width: 50%;
-    vertical-align: top; }
+    vertical-align: top;
+    padding-right: 15px; }
     .moscow_location_info .site_h {
       margin-bottom: 39px; }
     .moscow_location_info_block {
@@ -1590,7 +1599,8 @@ img {
     max-width: 556px;
     display: inline-block;
     width: 50%;
-    vertical-align: top; }
+    vertical-align: top;
+    overflow: hidden; }
 
 .moscow_payment {
   padding-top: 34px;
@@ -1686,20 +1696,28 @@ img {
     padding-bottom: 14px; }
     .moscow_payment.moscov_participants .moscow_payment_table_cell {
       background: #ffffff;
-      width: 20%; }
+      width: 16.66%; }
       .moscow_payment.moscov_participants .moscow_payment_table_cell:first-child {
         font-weight: 400;
-        width: 20%;
+        width: 16.66%;
         padding-top: 10px;
         text-align: center; }
   .moscow_payment_list {
     margin-top: 26px;
-    font-size: 16px; }
+    font-size: 16px;
+    border-bottom: 1px solid #ced1d5;
+    padding-bottom: 32px;
+    margin-bottom: 26px; }
     .moscow_payment_list_h {
       font-weight: 700;
       margin-bottom: 18px; }
     .moscow_payment_list .green_dot_list li {
       margin-bottom: 3px; }
+  .moscow_payment_caption {
+    font-size: 16px; }
+    .moscow_payment_caption b {
+      font-weight: 700;
+      color: #08a652; }
 
 .moscow_schedule {
   padding-top: 29px;
@@ -1718,6 +1736,10 @@ img {
     margin-right: -15px;
     margin-top: 19px;
     font-size: 0; }
+    .moscow_schedule_block_left, .moscow_schedule_block_right {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top; }
   .moscow_schedule_item {
     padding: 12px;
     position: relative;
@@ -1726,9 +1748,6 @@ img {
     display: table;
     width: 100%; }
     .moscow_schedule_item_wrapper {
-      display: inline-block;
-      vertical-align: middle;
-      width: 50%;
       min-height: 94px;
       height: 114px;
       padding: 10px 15px; }
@@ -1947,11 +1966,91 @@ img {
         right: -4px; }
 
 @media all and (max-width: 1155px) {
+  .jumbo.jumbo_other .jumbo_reg_link {
+    top: 57%; } }
+
+@media all and (max-width: 1155px) {
   .moscow_payment_description {
     margin-bottom: 0; }
   .moscow_payment_table.desktop_table {
     display: none; }
   .moscow_payment_table.mob_table {
     display: inline-block; } }
+
+@media all and (max-width: 1050px) {
+  .moscow_schedule_item_wrapper {
+    height: 136px; } }
+
+@media all and (max-width: 991px) {
+  .moscow_winner_table_desc {
+    display: none; }
+  .moscow_winner_table_mob {
+    display: block; }
+  .moscow_schedule_block_left, .moscow_schedule_block_right {
+    width: 100%; }
+  .moscow_schedule_item {
+    padding: 15px 12px 16px; }
+  .moscow_schedule_item_wrapper {
+    height: auto;
+    min-height: auto; }
+  .moscow_gallery_grid_col {
+    width: 100% !important; }
+  .moscow_gallery_item_wrapper {
+    width: 100% !important;
+    padding: 3px 15px; }
+  .moscow_gallery_item {
+    padding-bottom: 56.45% !important; } }
+
+@media all and (max-width: 855px) {
+  .site_h {
+    font-size: 24px !important; }
+  .moscow_location_info, .moscow_location_map {
+    width: 100%; }
+  .moscow_location_map {
+    margin-top: 30px; }
+  .moscow_payment.moscov_participants .moscow_payment_table_h {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top; }
+    .moscow_payment.moscov_participants .moscow_payment_table_h .moscow_payment_table_cell {
+      border-left: none; }
+  .moscow_payment.moscov_participants .moscow_payment_table_row {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    border: none; }
+  .moscow_payment.moscov_participants .moscow_payment_table_cell {
+    display: block;
+    width: 100% !important;
+    border-bottom: 1px solid #ced1d5;
+    border-left: 1px solid #ced1d5; }
+    .moscow_payment.moscov_participants .moscow_payment_table_cell:last-child {
+      border-bottom: none; }
+  .moscow_winner_list span {
+    display: block;
+    margin-bottom: 18px; }
+  .moscow_schedule {
+    padding-top: 20px; }
+    .moscow_schedule_header span:not(.site_h) {
+      color: #08a652;
+      display: block;
+      font-weight: 600;
+      margin-top: 7px; }
+    .moscow_schedule_header span.site_h + span {
+      display: none; }
+  .moscow_start_package_link .download_file_name {
+    display: block;
+    margin-top: 11px;
+    margin-left: 0; } }
+
+@media all and (max-width: 768px) {
+  .jumbo.jumbo_other {
+    min-height: 109px; }
+  .jumbo.jumbo_other .jumbo_reg_link {
+    display: none; }
+  .jumbo.jumbo_other .jumbo_timer {
+    bottom: 28px; }
+  .jumbo.jumbo_other .jumbo_timer_clock {
+    text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */
