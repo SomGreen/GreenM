@@ -308,6 +308,7 @@ img {
 */
 .header {
   position: absolute;
+  left: 0;
   width: 100%;
   background: #fff;
   z-index: 15;
@@ -1539,7 +1540,16 @@ img {
       width: 304px;
       height: 194px; }
   .partners_slider_img {
-    width: 77%; } }
+    width: 77%; }
+  .big_slider_content .slick-arrow {
+    width: 45px;
+    height: 45px; }
+  .big_slider_content .slick-arrow.slick-next {
+    width: 45px;
+    right: 16px; }
+  .big_slider_content .slick-arrow:before {
+    width: 31px;
+    height: 31px; } }
 
 .moscow_page .breedcrumbs {
   padding-top: 44px; }
@@ -1994,6 +2004,8 @@ img {
   .moscow_schedule_item_wrapper {
     height: auto;
     min-height: auto; }
+  .moscow_gallery .site_h {
+    padding-bottom: 15px; }
   .moscow_gallery_grid_col {
     width: 100% !important; }
   .moscow_gallery_item_wrapper {

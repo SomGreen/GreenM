@@ -507,4 +507,16 @@
   .partners_slider_img{
     width: 77%;
   }
+  .big_slider_content .slick-arrow{
+    width: 45px;
+    height: 45px;
+  }
+  .big_slider_content .slick-arrow.slick-next{
+    width: 45px;
+    right: 16px;
+  }
+  .big_slider_content .slick-arrow:before{
+    width: 31px;
+    height: 31px;
+  }
 }
