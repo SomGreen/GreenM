@@ -2068,6 +2068,9 @@ img {
   .jumbo.jumbo_other .jumbo_timer {
     bottom: 28px; }
   .jumbo.jumbo_other .jumbo_timer_clock {
-    text-align: center; } }
+    text-align: center; }
+  .moscow_payment_table_cell:first-child {
+    padding-left: 8px;
+    padding-right: 8px; } }
 
 /*# sourceMappingURL=style.css.map */
