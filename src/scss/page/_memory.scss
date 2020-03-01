@@ -29,6 +29,8 @@
     top: 0;
     left: 0;  
     z-index: 3;
+    text-align: right;
+    padding-top: 50px;
   }
   .memory_flovers{
     background: url('../../img/flowers.png') 0% 0% repeat;
@@ -176,6 +178,10 @@
 }
 
 @media all and(max-width: 620px){
+  .memory_banner .memory_map{
+    left: auto;
+    right: -55px;
+  }
   .memory_colums_block{
     // margin: 0;
   }

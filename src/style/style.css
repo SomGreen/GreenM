@@ -2114,7 +2114,9 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 3; }
+    z-index: 3;
+    text-align: right;
+    padding-top: 50px; }
   .memory_banner .memory_flovers {
     background: url("../../img/flowers.png") 0% 0% repeat;
     height: 320px;
@@ -2230,6 +2232,9 @@ img {
     padding: 0 15px; } }
 
 @media all and (max-width: 620px) {
+  .memory_banner .memory_map {
+    left: auto;
+    right: -55px; }
   .memory_colums_block .memory_col {
     width: 100%;
     margin-bottom: 30px; }
