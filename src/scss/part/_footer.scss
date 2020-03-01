@@ -3,7 +3,7 @@
   &_top{
     padding-top: 33px;
     padding-bottom: 40px;
-    font-size: 0;
+    font-size: 1px;
     text-align: justify;
     border-bottom: 1px solid #999999;
     &:after{
@@ -31,7 +31,7 @@
   &_nav{
     display: inline-block;
     width: 100%;
-    font-size: 0;
+    font-size: 1px;
     text-align: justify;
     padding-left: 293px;
     // margin-top: -20px;
@@ -56,7 +56,7 @@
     padding-top: 39px;
     padding-bottom: 47px;
     text-align: justify;
-    font-size: 0;
+    font-size: 1px;
     &:after{
       content: '';
       width: 100%;

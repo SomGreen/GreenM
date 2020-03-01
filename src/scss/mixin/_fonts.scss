@@ -39,3 +39,25 @@
   font-weight: 700;
   font-style: normal;
 }
+
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro/GothamPro-Black.eot');
+	src: local('Gotham Pro Black'), local('GothamPro-Black'),
+		url('../fonts/GothamPro/GothamPro-Black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro/GothamPro-Black.woff') format('woff'),
+		url('../fonts/GothamPro/GothamPro-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro/GothamPro-Medium.eot');
+	src: local('Gotham Pro Medium'), local('GothamPro-Medium'),
+		url('../fonts/GothamPro/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro/GothamPro-Medium.woff') format('woff'),
+		url('../fonts/GothamPro/GothamPro-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}

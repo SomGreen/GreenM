@@ -16,7 +16,7 @@
   min-height: 651px;
   &_header{
     margin-bottom: 25px;
-    font-size: 0;
+    font-size: 1px;
     text-align: justify;
     @include justify;
     *{
@@ -465,7 +465,7 @@
     &_buttons{
       padding-top: 137px;
       text-align: justify;
-      font-size: 0;
+      font-size: 1px;
       margin-left: -15px;
       margin-right: -15px;
       &:after{
