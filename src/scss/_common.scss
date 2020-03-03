@@ -222,7 +222,13 @@
     }
   } 
 }
-
+.select_dropdown{
+  position: relative;
+  .dropdown_list{
+    position: absolute;
+    width: 100%;
+  }
+}
 
 
 

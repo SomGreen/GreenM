@@ -307,6 +307,12 @@ img {
     left: 0;
     top: 7px; }
 
+.select_dropdown {
+  position: relative; }
+  .select_dropdown .dropdown_list {
+    position: absolute;
+    width: 100%; }
+
 /*
 .registration-form #adult_form,
 .registration-form #children_form,
@@ -2246,5 +2252,116 @@ img {
     margin-right: 0; }
     .memory_btn:last-child {
       margin-bottom: 0; } }
+
+.town_headline .container {
+  font-size: 1px;
+  text-align: justify; }
+  .town_headline .container:after {
+    content: '';
+    width: 100%;
+    display: inline-block; }
+
+.town_headline .registration_form_block {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0; }
+  .town_headline .registration_form_block .select_dropdown .dropdown_list {
+    max-height: 300px; }
+
+.town_headline_text {
+  display: inline-block;
+  vertical-align: middle; }
+
+.town_location {
+  background: none;
+  padding-bottom: 31px;
+  padding-bottom: 20px; }
+
+.town_rules {
+  padding-top: 37px; }
+  .town_rules_content {
+    padding-top: 33px; }
+  .town_rules_img {
+    float: left;
+    padding-right: 29px;
+    padding-bottom: 30px; }
+  .town_rules_text > div {
+    display: block;
+    margin-bottom: 18px; }
+  .town_rules_text ul {
+    display: inline-block; }
+    .town_rules_text ul li {
+      display: block; }
+
+.town_start_package {
+  padding-top: 30px; }
+
+.town_shirt {
+  padding-top: 38px;
+  padding-bottom: 25px; }
+  .town_shirt_h {
+    color: #262626;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 22px; }
+  .town_shirt_content {
+    margin-left: -15px;
+    margin-right: -15px;
+    font-size: 0; }
+  .town_shirt_block {
+    border: 1px solid #ced1d5;
+    background-color: #f8f8f8;
+    padding-top: 36px;
+    padding-bottom: 29px; }
+    .town_shirt_block_wrapper {
+      padding: 15px;
+      display: inline-block;
+      vertical-align: top;
+      width: 25%;
+      text-align: center; }
+    .town_shirt_block_img {
+      margin: auto;
+      margin-bottom: 20px;
+      max-width: 144px;
+      height: 185px; }
+      .town_shirt_block_img img {
+        height: 100%;
+        max-width: 100%; }
+    .town_shirt_block_caption {
+      margin-top: 20px;
+      color: #999999;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 20px; }
+    .town_shirt_block_name {
+      margin-top: 5px;
+      color: #262626;
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: uppercase; }
+  .town_shirt_loadMore {
+    text-align: center;
+    padding-top: 16px; }
+    .town_shirt_loadMore a {
+      border: 1px solid #ced1d5;
+      background-color: #ffffff;
+      padding: 15px 39px 13px;
+      color: #262626;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 20px;
+      position: relative;
+      display: inline-block; }
+      .town_shirt_loadMore a:after {
+        content: '\f0dd';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        color: #08a652;
+        font-size: 18px;
+        position: relative;
+        top: -3px;
+        right: -4px; }
 
 /*# sourceMappingURL=style.css.map */
