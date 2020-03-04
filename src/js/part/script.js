@@ -370,5 +370,22 @@ $(document).ready(function(){
     /* moscow gallery END */
     
     
+    /* town vote */
+
+    $('body').on('click', '.town_vote_item__btn.green', function(e) {
+      e.preventDefault();
+      if($(this).parents('.town_vote_block').is('.voted')){
+        return false;
+      }
+      else{
+        $(this).parents('.town_vote_item').addClass('active');
+        $(this).parents('.town_vote_block').addClass('voted');
+        var text = $(this).parents('.town_vote').find('.site_h').data('vote');
+        $(this).parents('.town_vote').find('.site_h').html(text);
+      }
+    })
+
+    $('.town_result_list_block').mCustomScrollbar();  
+    /* town vote END */
     
   });

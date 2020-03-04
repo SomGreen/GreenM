@@ -28,6 +28,11 @@
   background: none;
   padding-bottom: 31px;
   padding-bottom: 20px;
+  &_map{
+    img{
+      max-width: 100%;
+    }
+  }
 }
 
 .town_rules{
@@ -39,6 +44,9 @@
     float: left;
     padding-right: 29px;
     padding-bottom: 30px;
+    img{
+      max-width: 100%;
+    }
   }
   &_text{
     & > div{
@@ -137,5 +145,366 @@
         right: -4px;
       }
     }
+  }
+}
+
+
+
+.town_vote{
+  background: #e1f4ea;
+  padding: 54px 0 55px;  
+  .container{
+    
+  }
+  .site_h{
+    margin-bottom: 36px;
+  }
+  &_block{
+    margin-left: -15px;
+    margin-right: -15px;
+    font-size: 0;
+    &.voted{
+      .town_vote_item{
+        &:not(.active){
+          .town_vote_item__btn.green{
+            background-color: #ced1d5;
+            border: 1px solid #ced1d5;
+          }
+        }
+      } 
+    }
+  }
+  &_item{
+    background-color: #ffffff;
+    padding: 29px 19px 24px;
+    color: $fontBlack;
+    &.active{
+      background-color: $borderGreen;
+      color: #ffffff;
+      .town_vote_item__h:after{
+        background: #ffffff;
+      }
+      .town_vote_item__btn{
+        &.green{
+          display: none;
+        }
+      }
+    }
+    &_wrapper{
+      padding: 0 15px;
+      display: inline-block;
+      width: 33.33%;
+    }
+    &__h{
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 37px;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        width: 63px;
+        height: 2px;
+        background-color: $borderGreen;
+      }
+    }
+    &__text{
+      // color: $fontBlack;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-bottom: 33px;
+    }
+    &_footer{
+      
+    }
+    &__btn{
+      display: inline-block;
+      border: 1px solid #ced1d5;
+      background-color: #ffffff;
+      color: $fontBlack;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      // padding: 7px 29px 8px;
+      padding: 7px 9px 8px;
+      margin-bottom: 5px;
+      width: 45%;
+      max-width: 140px;
+      text-align: center;
+      &.green{
+        background-color: #00955c;
+        border: 1px solid #00955c;
+        margin-right: 15px;
+        color: #ffffff;
+        // padding: 7px 39px 8px;
+      }
+    }
+  }
+}
+
+
+
+.town_result{
+  padding-top: 66px;
+  padding-bottom: 52px;
+  .container{
+    
+  }
+  .site_h{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &_block{
+    font-size: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    &_item{
+      color: #ffffff;
+      background-color: #0abf5e;
+      padding: 20px;
+      display: table;
+      width: 100%;
+      &_wrapper{
+        width: 33.33%;
+        padding: 0 15px;
+        display: inline-block;
+        vertical-align: top;
+        &:first-child{
+          .town_result_block_item{
+            background-color: $borderGreen;
+          }
+        }
+      }
+    }
+  }
+  
+  &_place{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-right: 1px solid #06783b;
+    padding-right: 18px;
+    div{
+      &:nth-child(1){
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 38px;
+      }
+      &:nth-child(2){
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+  }
+  &_data{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 17px;
+  }
+  &_name{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  &_info{
+    display: table;
+  }
+  &_distance{
+    display: table-cell;
+    vertical-align: top;
+    div{
+      &:nth-child(1){
+        font-size: 14px;
+        font-weight: 400;
+      }
+      &:nth-child(2){
+        font-size: 22px;
+        font-weight: 600;
+      }
+    }
+  }
+  &_time{
+    display: table-cell;
+    vertical-align: top;
+    div{
+      &:nth-child(1){
+        font-size: 14px;
+        font-weight: 400;
+      }
+      &:nth-child(2){
+        font-size: 22px;
+        font-weight: 600;
+      }
+    }
+  }
+  
+  &_list{
+    max-width: 946px;
+    height: 419px;
+    background-color: #f8f8f8;
+    padding: 27px 0 30px;
+    margin: 38px auto 0;  
+    &_block{
+      height: 360px;  
+      overflow: hidden;
+    }
+    &_container{
+      
+    }
+    &_content{
+      width: 100%;
+      max-width: 750px;
+      margin: 0 auto;
+      display: table;
+    }
+    &_row{
+      color: $fontBlack;
+      font-size: 0px;
+      font-weight: 400;
+      line-height: 22px;
+      display: table-row;
+      // padding: 15px 0;
+    }
+    &_cell{
+      border-bottom: 1px solid #ced1d5;
+      padding: 13px 0;
+      span{
+        display: block;
+        padding-right: 10px;
+      }
+    }
+    &_place{
+      font-size: 18px;
+      display: table-cell;
+      padding-left: 17px;
+      span{
+        border-right: 1px solid #ced1d5;
+      }
+    }
+    &_name{
+      font-size: 18px;
+      display: table-cell;
+      padding-left: 56px;
+      span{
+        border-right: 1px solid #ced1d5;
+      }
+    }
+    &_time{
+      font-size: 18px;
+      display: table-cell;
+      padding-left: 33px;
+    }
+    &_more{
+      width: 100%;
+      max-width: 750px;
+      height: 22px;
+      background-color: #ededed;
+      margin: 0px auto 0;
+      color: $borderGreen;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+  .mCSB_inside>.mCSB_container{
+    margin-right: 0;
+  }
+  .mCSB_scrollTools .mCSB_draggerRail{
+    width: 4px;
+    background-color: #ced1d5;
+    border-radius: 0;
+  }
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width: 8px;
+    background-color: $borderGreen;
+    border-radius: 0;
+  }
+}
+
+
+@media all and (max-width: 1024px){
+  .town_location_info,
+  .town_location_map{
+    width: 100%;
+  }
+
+  .town_location_map{
+    margin-top: 20px;
+    max-width: none;
+    text-align: center;
+    img{
+      margin: auto;
+    }
+  }
+
+  .town_rules_img{
+    float: none;
+    img{
+      width: 100%;
+    }
+  }
+  .town_shirt_content{
+    text-align: center;
+  }
+  .town_shirt_block_wrapper{
+    width: 45%;
+  }
+  .town_vote_block{
+    text-align: center;
+  }
+  .town_vote_item_wrapper{
+    width: 45%;
+    padding: 15px;
+  }
+  
+  .town_result_block{
+    text-align: center;
+  }
+  .town_result_block_item_wrapper{
+    width: 45%;
+    padding: 15px;
+  }
+  .town_result_data{
+    text-align: left;
+  }
+  
+}
+
+@media all and (max-width: 768px){
+  .town_headline_text{
+    margin-bottom: 20px;
+  }
+  .town_shirt_content{
+    text-align: center;
+  }
+  .town_shirt_block_wrapper{
+    width: 100%;
+  }
+  .town_vote_block{
+    text-align: center;
+  }
+  .town_vote_item_wrapper{
+    width: 100%;
+  }
+  
+  .town_result_block{
+    text-align: center;
+  }
+  .town_result_block_item_wrapper{
+    width: 100%;
+  }
+  .town_result_data{
+    text-align: left;
+  }
+  .town_result .mCSB_inside > .mCSB_container{
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .town_result_list_more{
+    margin-right: 30px;
+    margin-left: 30px;
+    width: auto;
   }
 }

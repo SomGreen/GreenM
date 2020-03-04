@@ -1597,7 +1597,7 @@ img {
   .moscow_location_info {
     text-align: left;
     display: inline-block;
-    width: 50%;
+    width: 49%;
     vertical-align: top;
     padding-right: 15px; }
     .moscow_location_info .site_h {
@@ -2276,6 +2276,8 @@ img {
   background: none;
   padding-bottom: 31px;
   padding-bottom: 20px; }
+  .town_location_map img {
+    max-width: 100%; }
 
 .town_rules {
   padding-top: 37px; }
@@ -2285,6 +2287,8 @@ img {
     float: left;
     padding-right: 29px;
     padding-bottom: 30px; }
+    .town_rules_img img {
+      max-width: 100%; }
   .town_rules_text > div {
     display: block;
     margin-bottom: 18px; }
@@ -2363,5 +2367,251 @@ img {
         position: relative;
         top: -3px;
         right: -4px; }
+
+.town_vote {
+  background: #e1f4ea;
+  padding: 54px 0 55px; }
+  .town_vote .site_h {
+    margin-bottom: 36px; }
+  .town_vote_block {
+    margin-left: -15px;
+    margin-right: -15px;
+    font-size: 0; }
+    .town_vote_block.voted .town_vote_item:not(.active) .town_vote_item__btn.green {
+      background-color: #ced1d5;
+      border: 1px solid #ced1d5; }
+  .town_vote_item {
+    background-color: #ffffff;
+    padding: 29px 19px 24px;
+    color: #262626; }
+    .town_vote_item.active {
+      background-color: #08a652;
+      color: #ffffff; }
+      .town_vote_item.active .town_vote_item__h:after {
+        background: #ffffff; }
+      .town_vote_item.active .town_vote_item__btn.green {
+        display: none; }
+    .town_vote_item_wrapper {
+      padding: 0 15px;
+      display: inline-block;
+      width: 33.33%; }
+    .town_vote_item__h {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 37px;
+      position: relative; }
+      .town_vote_item__h:after {
+        content: '';
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        width: 63px;
+        height: 2px;
+        background-color: #08a652; }
+    .town_vote_item__text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-bottom: 33px; }
+    .town_vote_item__btn {
+      display: inline-block;
+      border: 1px solid #ced1d5;
+      background-color: #ffffff;
+      color: #262626;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      padding: 7px 9px 8px;
+      margin-bottom: 5px;
+      width: 45%;
+      max-width: 140px;
+      text-align: center; }
+      .town_vote_item__btn.green {
+        background-color: #00955c;
+        border: 1px solid #00955c;
+        margin-right: 15px;
+        color: #ffffff; }
+
+.town_result {
+  padding-top: 66px;
+  padding-bottom: 52px; }
+  .town_result .site_h {
+    text-align: center;
+    margin-bottom: 30px; }
+  .town_result_block {
+    font-size: 0;
+    margin-left: -15px;
+    margin-right: -15px; }
+    .town_result_block_item {
+      color: #ffffff;
+      background-color: #0abf5e;
+      padding: 20px;
+      display: table;
+      width: 100%; }
+      .town_result_block_item_wrapper {
+        width: 33.33%;
+        padding: 0 15px;
+        display: inline-block;
+        vertical-align: top; }
+        .town_result_block_item_wrapper:first-child .town_result_block_item {
+          background-color: #08a652; }
+  .town_result_place {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-right: 1px solid #06783b;
+    padding-right: 18px; }
+    .town_result_place div:nth-child(1) {
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 38px; }
+    .town_result_place div:nth-child(2) {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 22px; }
+  .town_result_data {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 17px; }
+  .town_result_name {
+    font-size: 22px;
+    font-weight: 600; }
+  .town_result_info {
+    display: table; }
+  .town_result_distance {
+    display: table-cell;
+    vertical-align: top; }
+    .town_result_distance div:nth-child(1) {
+      font-size: 14px;
+      font-weight: 400; }
+    .town_result_distance div:nth-child(2) {
+      font-size: 22px;
+      font-weight: 600; }
+  .town_result_time {
+    display: table-cell;
+    vertical-align: top; }
+    .town_result_time div:nth-child(1) {
+      font-size: 14px;
+      font-weight: 400; }
+    .town_result_time div:nth-child(2) {
+      font-size: 22px;
+      font-weight: 600; }
+  .town_result_list {
+    max-width: 946px;
+    height: 419px;
+    background-color: #f8f8f8;
+    padding: 27px 0 30px;
+    margin: 38px auto 0; }
+    .town_result_list_block {
+      height: 360px;
+      overflow: hidden; }
+    .town_result_list_content {
+      width: 100%;
+      max-width: 750px;
+      margin: 0 auto;
+      display: table; }
+    .town_result_list_row {
+      color: #262626;
+      font-size: 0px;
+      font-weight: 400;
+      line-height: 22px;
+      display: table-row; }
+    .town_result_list_cell {
+      border-bottom: 1px solid #ced1d5;
+      padding: 13px 0; }
+      .town_result_list_cell span {
+        display: block;
+        padding-right: 10px; }
+    .town_result_list_place {
+      font-size: 18px;
+      display: table-cell;
+      padding-left: 17px; }
+      .town_result_list_place span {
+        border-right: 1px solid #ced1d5; }
+    .town_result_list_name {
+      font-size: 18px;
+      display: table-cell;
+      padding-left: 56px; }
+      .town_result_list_name span {
+        border-right: 1px solid #ced1d5; }
+    .town_result_list_time {
+      font-size: 18px;
+      display: table-cell;
+      padding-left: 33px; }
+    .town_result_list_more {
+      width: 100%;
+      max-width: 750px;
+      height: 22px;
+      background-color: #ededed;
+      margin: 0px auto 0;
+      color: #08a652;
+      text-align: center;
+      cursor: pointer; }
+  .town_result .mCSB_inside > .mCSB_container {
+    margin-right: 0; }
+  .town_result .mCSB_scrollTools .mCSB_draggerRail {
+    width: 4px;
+    background-color: #ced1d5;
+    border-radius: 0; }
+  .town_result .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 8px;
+    background-color: #08a652;
+    border-radius: 0; }
+
+@media all and (max-width: 1024px) {
+  .town_location_info,
+  .town_location_map {
+    width: 100%; }
+  .town_location_map {
+    margin-top: 20px;
+    max-width: none;
+    text-align: center; }
+    .town_location_map img {
+      margin: auto; }
+  .town_rules_img {
+    float: none; }
+    .town_rules_img img {
+      width: 100%; }
+  .town_shirt_content {
+    text-align: center; }
+  .town_shirt_block_wrapper {
+    width: 45%; }
+  .town_vote_block {
+    text-align: center; }
+  .town_vote_item_wrapper {
+    width: 45%;
+    padding: 15px; }
+  .town_result_block {
+    text-align: center; }
+  .town_result_block_item_wrapper {
+    width: 45%;
+    padding: 15px; }
+  .town_result_data {
+    text-align: left; } }
+
+@media all and (max-width: 768px) {
+  .town_headline_text {
+    margin-bottom: 20px; }
+  .town_shirt_content {
+    text-align: center; }
+  .town_shirt_block_wrapper {
+    width: 100%; }
+  .town_vote_block {
+    text-align: center; }
+  .town_vote_item_wrapper {
+    width: 100%; }
+  .town_result_block {
+    text-align: center; }
+  .town_result_block_item_wrapper {
+    width: 100%; }
+  .town_result_data {
+    text-align: left; }
+  .town_result .mCSB_inside > .mCSB_container {
+    margin-right: 30px;
+    margin-left: 30px; }
+  .town_result_list_more {
+    margin-right: 30px;
+    margin-left: 30px;
+    width: auto; } }
 
 /*# sourceMappingURL=style.css.map */
