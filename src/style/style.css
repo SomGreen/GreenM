@@ -313,20 +313,27 @@ img {
     position: absolute;
     width: 100%; }
 
-/*
-.registration-form #adult_form,
-.registration-form #children_form,
-.registration-form .add_kid_form_btn{
-  display: none;
-}
-#children_form .children-form{
-  display: none;
-}
-#children_form .children-form.active {
-  display: block;
-}
+.black_btn {
+  background-color: #262626;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 26px; }
 
-*/
+/*
+  .registration-form #adult_form,
+  .registration-form #children_form,
+  .registration-form .add_kid_form_btn{
+    display: none;
+  }
+  #children_form .children-form{
+    display: none;
+  }
+  #children_form .children-form.active {
+    display: block;
+  }
+  
+  */
 .header {
   position: absolute;
   left: 0;
@@ -1222,6 +1229,34 @@ img {
       position: absolute;
       right: -18px;
       top: 3px; }
+
+.pagination {
+  border: 1px solid #ced1d5;
+  text-align: center;
+  margin-bottom: 45px; }
+  .pagination li {
+    display: inline-block;
+    margin: 0 7px; }
+    .pagination li.pagination_btn {
+      margin: 0; }
+      .pagination li.pagination_btn a {
+        padding: 14px 16px; }
+        .pagination li.pagination_btn a:hover {
+          color: #08a652; }
+      .pagination li.pagination_btn.prev {
+        float: left;
+        border-right: 1px solid #ced1d5; }
+      .pagination li.pagination_btn.next {
+        float: right;
+        border-left: 1px solid #ced1d5; }
+    .pagination li.current {
+      background-color: #f0f0f0; }
+    .pagination li a,
+    .pagination li span {
+      padding: 14px 14px;
+      display: block; }
+    .pagination li a:hover {
+      color: #08a652; }
 
 .jumbo {
   width: 100%;
@@ -2613,5 +2648,123 @@ img {
     margin-right: 30px;
     margin-left: 30px;
     width: auto; } }
+
+.press_about_main .breedcrumbs_container {
+  padding: 43px 0 30px; }
+
+.press_about_block .site_h {
+  padding-bottom: 28px;
+  border-bottom: 1px solid #999999; }
+
+.press_about_content {
+  padding-top: 46px; }
+
+.press_about_item {
+  font-size: 0;
+  margin-bottom: 60px; }
+
+.press_about_img {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  width: 50%; }
+  .press_about_img img {
+    min-height: 100%;
+    min-width: 100%; }
+
+.press_about_text {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 15px;
+  width: 50%; }
+
+.press_about_h {
+  padding-top: 14px;
+  color: #262626;
+  font-size: 32px;
+  font-weight: 700;
+  padding-bottom: 27px;
+  border-bottom: 1px solid #999999; }
+
+.press_about_caption {
+  margin-top: 23px;
+  color: #262626;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px; }
+
+.press_about_link {
+  display: inline-block;
+  margin-top: 25px; }
+
+@media all and (max-width: 768px) {
+  .press_about_item {
+    margin-bottom: 40px; }
+  .press_about_img {
+    width: 100%; }
+  .press_about_text {
+    width: 100%;
+    padding-left: 0; } }
+
+@media all and (max-width: 620px) {
+  .press_about_link {
+    width: 100%;
+    text-align: center; }
+  .pagination li {
+    margin: 0; }
+  .pagination li.pagination_btn a, .pagination li a, .pagination li span {
+    padding: 12px 10px; } }
+
+.faq_main .breedcrumbs_container {
+  padding: 43px 0 30px; }
+
+.faq_block .site_h {
+  padding-bottom: 28px; }
+
+.faq_content {
+  padding: 13px 35px;
+  border: 1px solid #ced1d5;
+  border-radius: 3px;
+  margin-bottom: 65px; }
+
+.faq_item {
+  border-bottom: 1px solid #ced1d5; }
+  .faq_item:last-child {
+    border-bottom: none; }
+  .faq_item_h {
+    color: #262626;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 17px 0;
+    position: relative;
+    padding-right: 50px;
+    cursor: pointer; }
+    .faq_item_h.active {
+      color: #08a652; }
+      .faq_item_h.active i {
+        -webkit-transform: translate(0, -50%) rotate(-180deg);
+        transform: translate(0, -50%) rotate(-180deg); }
+    .faq_item_h i {
+      color: #262626;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      transition: 0.25s ease;
+      -webkit-transition: 0.25s ease;
+      -moz-transition: 0.25s ease;
+      -ms-transition: 0.25s ease;
+      -o-transition: 0.25s ease; }
+  .faq_item_text {
+    display: none;
+    padding-top: 12px;
+    padding-bottom: 25px;
+    font-size: 16px; }
+
+@media all and (max-width: 768px) {
+  .faq_item_h {
+    font-size: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

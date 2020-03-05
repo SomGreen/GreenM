@@ -387,5 +387,27 @@ $(document).ready(function(){
 
     $('.town_result_list_block').mCustomScrollbar();  
     /* town vote END */
+
+
+    /* FAQ */
+
+    $('body').on('click', '.faq_item_h', function() {
+      // $(this).toggleClass('active');
+      if(!$(this).is('.active')){
+        $('.faq_item_text').slideUp();
+        $(this).parents('.faq_item').find('.faq_item_text').slideDown();
+        $('.faq_item_h').removeClass('active');
+        $(this).addClass('active');
+        
+      }
+      else{
+        $(this).removeClass('active');
+        $(this).parents('.faq_item').find('.faq_item_text').slideUp();
+      }
+    });
+
+    /* FAQ END */
+
+
     
   });

@@ -1,0 +1,90 @@
+.press_about{
+  &_main{
+    .breedcrumbs_container{
+      padding: 43px 0 30px;
+    }
+  }
+  
+  &_block{
+    .site_h{
+      padding-bottom: 28px;
+      border-bottom: 1px solid #999999;
+      
+    }
+  }
+  &_content{
+    padding-top: 46px;
+  }
+  &_item{
+    font-size: 0;
+    margin-bottom: 60px;
+  }
+  &_img{
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    width: 50%;
+    img{
+      min-height: 100%;
+      min-width: 100%;
+      
+    }
+  }
+  &_text{
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 15px;
+    width: 50%;
+  }
+  &_h{
+    padding-top: 14px;
+    color: $fontBlack;
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 27px;
+    border-bottom: 1px solid #999999;
+  }
+  &_caption{
+    margin-top: 23px;
+    color: $fontBlack;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  &_link{
+    display: inline-block;
+    margin-top: 25px;
+  }
+}
+
+
+@media all and (max-width: 768px){
+
+  .press_about{
+    &_item{
+      margin-bottom: 40px;
+    }
+    &_img{
+      width: 100%;
+    }
+    &_text{
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+}
+
+@media all and (max-width: 620px){
+.press_about_link{
+  width: 100%;
+  text-align: center;
+}
+
+.pagination li{
+  margin: 0;
+}
+.pagination li.pagination_btn a, .pagination li a, .pagination li span{
+  padding: 12px 10px;
+}
+}
