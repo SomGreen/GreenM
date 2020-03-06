@@ -498,7 +498,7 @@
   @media all and(max-width: 1085px){
     .registration_output_block,
     .registration_form_block{
-      width: 50%;
+      width: 49%;
     }
     .hidden_form_block{
       .registration_form_block:nth-child(3){
@@ -509,6 +509,13 @@
   }
   
   @media all and(max-width: 768px){
+    .registration_header{
+      text-align: left;
+      .site_h{
+        font-size: 21px;
+        display: block;
+      }
+    }
     .registration_form_rules{
       padding-left: 15px;
     }

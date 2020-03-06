@@ -1184,11 +1184,16 @@ img {
 @media all and (max-width: 1085px) {
   .registration_output_block,
   .registration_form_block {
-    width: 50%; }
+    width: 49%; }
   .hidden_form_block .registration_form_block:nth-child(3) {
     display: none; } }
 
 @media all and (max-width: 768px) {
+  .registration_header {
+    text-align: left; }
+    .registration_header .site_h {
+      font-size: 21px;
+      display: block; }
   .registration_form_rules {
     padding-left: 15px; }
   .registration_output_block,
@@ -1352,6 +1357,62 @@ img {
         line-height: 51px;
         display: block; }
 
+.reg_dination {
+  padding-top: 50px; }
+  .reg_dination .step_counter {
+    margin-top: 10px; }
+  .reg_dination_body {
+    margin-top: 74px;
+    position: relative; }
+  .reg_dination_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px; }
+    .reg_dination_img img {
+      width: 100%; }
+  .reg_dination_text {
+    padding-left: 196px;
+    padding-top: 48px; }
+    .reg_dination_text_h {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 27px; }
+    .reg_dination_text_p {
+      color: #262626;
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 27px; }
+    .reg_dination_text_a {
+      color: #2ba27c;
+      font-weight: 700; }
+  .reg_dination_footer {
+    padding-top: 84px;
+    text-align: justify;
+    font-size: 1px;
+    margin-left: -15px;
+    margin-right: -15px; }
+    .reg_dination_footer:after {
+      content: '';
+      width: 100%;
+      display: inline-block; }
+
+.step_indicator {
+  margin-left: -15px;
+  margin-right: -15px;
+  font-size: 0;
+  margin-top: 37px; }
+  .step_indicator div {
+    padding: 0 15px;
+    width: 33.33%;
+    display: inline-block; }
+    .step_indicator div span {
+      background-color: #ced1d5;
+      display: block;
+      height: 5px; }
+    .step_indicator div.active span {
+      background-color: #08a652; }
+
 @media all and (max-width: 1135px) {
   .jumbo_text_h {
     font-size: 50px; }
@@ -1424,7 +1485,21 @@ img {
     margin-bottom: 30px; }
   .jumbo_text_caption {
     color: #262626;
-    font-size: 14px; } }
+    font-size: 14px; }
+  .reg_dination_footer {
+    margin: 0 -5px; }
+    .reg_dination_footer .registration_form_block {
+      width: 49%;
+      padding: 5px; }
+  .reg_dination_img {
+    width: 94px; }
+  .reg_dination_text {
+    padding-left: 118px;
+    padding-top: 0; }
+  .reg_dination_body {
+    margin-top: 25px; }
+  .reg_dination_footer {
+    padding-top: 46px; } }
 
 .about_project {
   background: #ffffff;
@@ -2071,7 +2146,7 @@ img {
     padding-bottom: 56.45% !important; } }
 
 @media all and (max-width: 855px) {
-  .site_h {
+  .moscow_page .site_h {
     font-size: 24px !important; }
   .moscow_location_info, .moscow_location_map {
     width: 100%; }

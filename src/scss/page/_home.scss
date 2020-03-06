@@ -128,6 +128,79 @@
   }
 }
 
+.reg_dination{
+  padding-top: 50px;
+  .step_counter{
+    margin-top: 10px;
+  }
+  &_body{
+    margin-top: 74px;
+    position: relative;
+  }
+  &_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+    img{
+      width: 100%;
+    }
+  }
+  &_text{
+    padding-left: 196px;
+    padding-top: 48px;
+    &_h{
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 27px;
+    }
+    &_p{
+      color: $fontBlack;
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 27px;
+    }
+    &_a{
+      color: #2ba27c;
+      font-weight: 700;      
+    }
+  }
+  &_footer{
+    padding-top: 84px;
+    text-align: justify;
+    font-size: 1px;
+    margin-left: -15px;
+    margin-right: -15px;
+    &:after {
+      content: '';
+      width: 100%;
+      display: inline-block;
+    }
+  }
+}
+
+
+.step_indicator{
+  margin-left: -15px;
+  margin-right: -15px;  
+  font-size: 0;
+  margin-top: 37px;
+  div{
+    padding: 0 15px;
+    width: 33.33%;
+    display: inline-block;
+    span{
+      background-color: #ced1d5;
+      display: block;
+      height: 5px;
+    }
+    &.active{
+      span{
+        background-color: $borderGreen;
+      }
+    }
+  }
+}
 
 
 
@@ -191,7 +264,7 @@
       height: 330px;
       // bottom: 85px;
       // right: 10px;
-
+      
       right: 50%;
       bottom: 50%;
       @include translate(50%, 42%);
@@ -214,7 +287,7 @@
     &_clock{
       // height: 85px;
       // min-width: $minwidth;
-
+      
       padding-top: 15px;
       text-align: center;
       .lightTimerBlock{
@@ -245,6 +318,29 @@
     color: $fontBlack;
     font-size: 14px;
   }
+  
+  .reg_dination_footer{
+    margin: 0 -5px;
+    .registration_form_block{
+      width: 49%;
+      padding: 5px;
+    }
+  }
+  
+  .reg_dination_img{
+    width: 94px;
+  }
+  .reg_dination_text{
+    padding-left: 118px;
+    padding-top: 0;  
+  }
+  .reg_dination_body{
+    margin-top: 25px;
+  }
+  .reg_dination_footer{
+    padding-top: 46px;
+  }
+  
   
 }
 
