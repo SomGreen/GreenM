@@ -2840,6 +2840,92 @@ img {
 
 @media all and (max-width: 768px) {
   .faq_item_h {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .faq_content {
+    padding: 0; }
+  .faq_item_h {
+    padding-left: 20px;
+    padding-right: 70px;
+    position: relative; }
+    .faq_item_h.active i {
+      color: #08a652; }
+    .faq_item_h i {
+      right: 20px; }
+    .faq_item_h:after {
+      content: '';
+      position: absolute;
+      right: 58px;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background: #ced1d5; }
+  .faq_item_text {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top: 1px solid #ced1d5; } }
+
+.history_breedcrumbs {
+  padding-top: 43px; }
+
+.history_header .site_h {
+  padding-top: 26px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #999999; }
+
+.history_header_caption {
+  color: #262626;
+  font-size: 16px;
+  font-weight: 400;
+  font-weight: 600;
+  margin-top: 33px;
+  margin-bottom: 55px; }
+
+.history_body_item {
+  position: relative;
+  margin-bottom: 81px; }
+  .history_body_item_year {
+    color: #ced1d5;
+    font-size: 60px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: right; }
+    .history_body_item_year span {
+      display: block;
+      width: 384px; }
+  .history_body_item_text {
+    padding-left: 486px;
+    color: #262626;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    position: relative; }
+    .history_body_item_text:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 430px;
+      width: 14px;
+      height: 100%;
+      background-color: #08a652; }
+    .history_body_item_text:after {
+      content: '';
+      position: absolute;
+      bottom: -54px;
+      left: 430px;
+      width: 14px;
+      height: 24px;
+      background: url(../../img/history_item_after.png) 50% 50% no-repeat; }
+    .history_body_item_text p {
+      margin-bottom: 20px; }
+  .history_body_item_img {
+    margin-left: -15px;
+    margin-right: -15px;
+    font-size: 0; }
+    .history_body_item_img_item {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 15px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -62,4 +62,41 @@
   .faq_item_h{
     font-size: 20px;
   }
+
+  .faq_content{
+    // padding-left: 0;
+    // padding-right: 0;
+    padding: 0;
+  }
+  .faq_item{
+    // padding-right: 20px;
+    &_h{
+      padding-left: 20px;
+      padding-right: 70px;
+      position: relative;
+      // border-bottom: 1px solid #ced1d5;
+      &.active{
+        i{
+          color: #08a652;
+        }
+      }
+      i{
+        right: 20px;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        right: 58px;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: #ced1d5;
+      }
+    }
+        &_text{
+          padding-left: 20px;
+          padding-right: 20px;
+          border-top: 1px solid #ced1d5;
+        }
+  }
 }
